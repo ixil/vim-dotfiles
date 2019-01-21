@@ -1,0 +1,1 @@
+https://github.com/zenbro/dotfiles/blob/master/.nvimrc#L151-L187

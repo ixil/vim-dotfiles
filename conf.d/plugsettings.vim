@@ -1,0 +1,160 @@
+""" Plugin Settings
+" Some things change keys, these go into the keys.vimrc
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" *Index*
+" |Goyo| |Limelight| |Zenroom|
+" |Autocorrect|
+" |Workspace|
+" |Session|
+" |VimSnippets|
+" |Gutentags|
+" |Python_syntax|
+" |Polyglot|
+" |A_Alternate|
+" |Nerdtree|
+" |Gitgutter|
+" |Syntastic|
+" |Ack|
+" |Ale|
+" |VimLaTeX|
+" |Plasticboy-vim-markdown|
+" |Lexical| |Thesaurus-Query|
+" |YCM|
+" |GHDashboard|
+" |Pandoc|
+" |Litecorrect|
+" |EnhancedDiff|
+" |Ctrlsf|
+" |FZF|
+" |latex-unicoder.vim|
+" |Peekaboo|
+" |EasyMotion|
+" |YankRing|
+" |Lion|
+" |textobj-clang|
+" |CtrlSF|
+" |Startify|
+" |AutoPairs|
+" |Utl|
+
+
+" *Goyo* *Limelight* *Zenroom*
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_default_coefficient = 0.7
+let g:limelight_conceal_ctermfg = 238
+
+" *Autocorrect*
+autocmd FileType markdown,mkd call AutoCorrect()
+autocmd FileType tex call AutoCorrect()
+autocmd FileType text call AutoCorrect()
+
+
+" *Workspace*
+source $XDG_CONFIG_HOME/vim/conf.d/workspace.vim
+
+" *Session*
+source $XDG_CONFIG_HOME/vim/conf.d/session.vim
+
+" *VimSnippets*
+source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
+
+" *Gutentags*
+source $XDG_CONFIG_HOME/vim/conf.d/gutentags.vim
+
+" *Python_syntax*
+source $XDG_CONFIG_HOME/vim/conf.d/python_syntax.vim
+
+" *Polyglot*
+let g:polyglot_disabled = ['tex', 'latex', 'python']
+
+" *A_Alternate*
+let g:alternate_nomap = 1
+
+" *Nerdtree*
+source $XDG_CONFIG_HOME/vim/conf.d/nerdtree.vim
+
+" *Gitgutter*
+source $XDG_CONFIG_HOME/vim/conf.d/gitgutter.vim
+
+" *Syntastic*
+" source $XDG_CONFIG_HOME/vim/conf.d/syntastic.vim
+
+" *Ack*
+source $XDG_CONFIG_HOME/vim/conf.d/ack.vim
+
+" *Ale*
+source $XDG_CONFIG_HOME/vim/conf.d/ale.vim
+
+" *VimLaTeX*
+let g:vimtex_view_method = 'zathura'
+
+" *Plasticboy-vim-markdown*
+let g:vim_markdown_fenced_languages = ['csharp=cs', 'python=python', 'c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini']".
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_folding_level = 6
+let g:vim_markdown_conceal = 1      " 0 disables conceal
+" let g:tex_conceal = ""      " tex concealing
+let g:vim_markdown_math = 1
+let g:vim_markdown_follow_anchor = 1    " ge follows anchors in text
+let g:vim_markdown_no_extensions_in_markdown = 1 " open x.md file by default with ge instead of x
+
+" *Lexical* *Thesaurus-Query*
+source $XDG_CONFIG_HOME/vim/conf.d/lexical.vim
+
+" *YCM*
+source $XDG_CONFIG_HOME/vim/conf.d/ycm.vim
+
+" *GHDashboard*
+source $XDG_CONFIG_HOME/vim/conf.d/ghdashboard.vim
+
+" *Pandoc*
+source $XDG_CONFIG_HOME/vim/conf.d/pandoc.vim
+
+" *Litecorrect*
+source $XDG_CONFIG_HOME/vim/conf.d/litecorrect.vim
+
+" *EnhancedDiff*
+source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
+
+" *Ctrlsf*
+source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
+
+" *FZF*
+source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
+
+" *latex-unicoder.vim*
+source $XDG_CONFIG_HOME/vim/conf.d/latex_unicoder.vim
+
+" *Peekaboo*
+let g:peekaboo_delay=300 " Delay the side window unless I'm really slow
+
+" *EasyMotion*
+source $XDG_CONFIG_HOME/vim/conf.d/easymotion.vim
+
+" *YankRing*
+source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
+
+" *Lion*
+let b:lion_squeeze_spaces = 1
+
+" *textobj-clang*
+let g:textobj_clang_more_mappings=1
+
+" *CtrlSF*
+source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
+
+" *Startify*
+source $XDG_CONFIG_HOME/vim/conf.d/startify.vim
+
+" *MultiCursor*
+let g:multi_cursor_use_default_mapping=0
+
+" *AutoPairs*
+source $XDG_CONFIG_HOME/vim/conf.d/autopairs.vim
+
+" *Utl*
+source $XDG_CONFIG_HOME/vim/conf.d/utl_rc.vim
