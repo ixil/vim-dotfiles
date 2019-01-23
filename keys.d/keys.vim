@@ -138,6 +138,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+nnoremap <c-a> :if !switch#Switch()<bar>call speeddating#increment()<bar>endif<cr>
+nnoremap <c-x> :if !switch#Switch({'reverse': 1})<bar>call speeddating#decrement()<bar>endif<cr>
+
 " autocmd FileType julia nmap <buffer> K <Plug>(JuliaDocPrompt)
 
 " Edit/create file under curso
@@ -376,6 +379,13 @@ let g:jedi#goto_assignments_command = "gD"
 let g:jedi#goto_command = "gd"
 let g:jedi#usages_command = "gu"
 let g:jedi#rename_command = "<c-c>r"
+
+" let g:jedi#goto_assignment = "gd"
+" nnoremap gd :YcmCompleter GoTo<CR>
+" nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:jedi#usages_command = "gu"
+" let g:jedi#rename_command = "<c-c>r"
+" nnoremap <c-c>r :YcmCompleter RefactorRename<CR>
 
 " Wordfinder:
 " TODO <C-F> makes a pause for foward page >:(

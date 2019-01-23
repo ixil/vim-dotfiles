@@ -135,6 +135,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      Plug 'tpope/vim-dispatch'
      Plug 'tpope/vim-sleuth'
+     Plug 'jamessan/vim-gnupg'
 
  """ Text Objects:
  " https://github.com/kana/vim-textobj-user/wiki
@@ -348,7 +349,7 @@ call plug#begin('~/.local/share/vim/plugged')
  " Utilities:
      " TODO
      " Plug 'AndrewRadev/sideways.vim'
-     " Plug 'AndrewRadev/switch.vim'
+     Plug 'AndrewRadev/switch.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
  " Window management
