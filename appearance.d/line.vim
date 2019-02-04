@@ -1,4 +1,5 @@
 
+"Not Airline:
 function! s:fzf_statusline()
     " Override statusline as you like
     highlight fzf1 ctermfg=161 ctermbg=251
@@ -13,6 +14,8 @@ set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+
+"Airline:
 "Airline settings
 let g:airline_powerline_fonts=1
 let g:airline_theme='badwolf'
@@ -26,8 +29,7 @@ let airline#extensions#tmuxline#snapshot_file = "~/.config/tmux/tmux-statusline-
 let g:airline_extensions = ['branch', 'tabline', 'ale', 'csv', 'gutentags', 'hunks', 'nrrwrgn', 'quickfix', 'tagbar', 'tmuxline', 'whitespace',]
 
 " Tabline:
-let airline#extensions#tabline#current_first = 1
-let g:airline#extensions#tabline#enabled=1
+" let airline#extensions#tabline#current_first = 1
 let g:airline#extensions#tabline#formatter= 'unique_tail_improved'
 " let g:airline#extensions#tabline#tab_nr_type = 0 " # of splits (default)
 " let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
