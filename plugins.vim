@@ -184,6 +184,7 @@ call plug#begin('~/.local/share/vim/plugged')
  """ Status Line:
      Plug 'vim-airline/vim-airline'
      Plug 'vim-airline/vim-airline-themes'
+     Plug 'mg979/vim-xtabline'
 
  " Unicode And Emojis:
      " Unicode character meta-data etc digraphs: C-k
