@@ -47,9 +47,15 @@ nnoremap Y y$
 nnoremap <silent> Q <C-W>c
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
-map <silent><A-1> :tabn 1<cr>
-map <silent><A-2> :tabn 2<cr>
-map <silent><A-3> :tabn 3<cr>
+" map <silent><A-1> :tabn 1<cr>
+" map <silent><A-2> :tabn 2<cr>
+" map <silent><A-3> :tabn 3<cr>
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <A-1> <Plug>AirlineSelectTab1
+nmap <A-2> <Plug>AirlineSelectTab2
+nmap <A-3> <Plug>AirlineSelectTab3
+  " nmap <leader>- <Plug>AirlineSelectPrevTab
+  " nmap <leader>+ <Plug>AirlineSelectNextTab
 vnoremap > >gv
 vnoremap < <gv
 vnoremap < <gv
