@@ -1,4 +1,5 @@
 " Should probably move somewhere else "
+let g:switch_mapping = ""
 autocmd FileType tex,plaintex let b:switch_custom_definitions =
     \ [
     \    [ '\\tiny', '\\scriptsize', '\\footnotesize', '\\small', '\\normalsize', '\\large', '\\Large', '\\LARGE', '\\huge', '\\Huge' ],
