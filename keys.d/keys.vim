@@ -110,8 +110,10 @@ inoremap <C-q> <C-x>
 
 " TODO Map these to something useful?
 " TODO Map these to something useful?
-noremap <Up> :GitGutterPrevHunk<CR>
-noremap <Down> :GitGutterNextHunk<CR>
+noremap <Up> <plug>(signify-next-hunk)
+noremap <Down> <plug>(signify-prev-hunk)
+" noremap <Up> :GitGutterPrevHunk<CR>
+" noremap <Down> :GitGutterNextHunk<CR>
 "TODO Maybe add with ALE?
 noremap <Right> :cnext<CR>
 noremap <Left> :cprev<CR>
@@ -138,8 +140,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-nnoremap <c-a> :if !switch#Switch()<bar>call speeddating#increment()<bar>endif<cr>
-nnoremap <c-x> :if !switch#Switch({'reverse': 1})<bar>call speeddating#decrement()<bar>endif<cr>
+nnoremap <c-a> :if !switch#Switch() <bar> call speeddating#increment() <bar> endif<cr>
+nnoremap <c-x> :if !switch#Switch({'reverse': 1}) <bar> call speeddating#decrement() <bar> endif<cr>
 
 " autocmd FileType julia nmap <buffer> K <Plug>(JuliaDocPrompt)
 
@@ -517,6 +519,14 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <A-j> :m .+1<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TextObjects:
+
+" omap ic <plug>(signify-motion-inner-pending)
+" xmap ic <plug>(signify-motion-inner-visual)
+" omap ac <plug>(signify-motion-outer-pending)
+" xmap ac <plug>(signify-motion-outer-visual)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UndoTree CustomMap:

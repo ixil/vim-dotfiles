@@ -166,12 +166,14 @@ call plug#begin('~/.local/share/vim/plugged')
                  \ { 'as': 'local/next_motion_mapping.vim', 'do': 'mkdir -p plugin; cp -f *.vim plugin/' }
 
  """ Git Stuff:
-     "Plug 'tpope/vim-git' "For really old vims
-     Plug 'airblade/vim-gitgutter' " https://github.com/airblade/vim-gitgutter#hunks
      Plug 'tpope/vim-fugitive'
+     "Plug 'tpope/vim-git' "For really old vims
+     "
+     Plug 'mhinz/vim-signify' " all other VCS
+     " Plug 'airblade/vim-gitgutter' " https://github.com/airblade/vim-gitgutter#hunks
+
      Plug 'gregsexton/gitv', {'on': ['Gitv']}
      Plug 'christoomey/vim-conflicted'
-     "Plug 'mhinz/vim-signify' " all other VCS
      Plug 'junegunn/vim-github-dashboard'
      Plug 'junegunn/gv.vim'  " gv to browse commit log
 
@@ -367,7 +369,6 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'Shougo/denite'
      Plug 'edkolev/tmuxline.vim'
      Plug 'Yggdroot/indentLine'
-     Plug 'mhinz/vim-signify' "for otherscm
 
  "" Color Schemes:
     " Plug 'nightsense/night-and-day'  " switch colorschemes based on time of day

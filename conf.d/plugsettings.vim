@@ -78,6 +78,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/nerdtree.vim
 " *Gitgutter*
 source $XDG_CONFIG_HOME/vim/conf.d/gitgutter.vim
 
+" *Signify*
+source $XDG_CONFIG_HOME/vim/conf.d/signify.vim
+
 " *Syntastic*
 " source $XDG_CONFIG_HOME/vim/conf.d/syntastic.vim
 
@@ -156,6 +159,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/utl_rc.vim
 
 " *Switch*
 source $XDG_CONFIG_HOME/vim/conf.d/switch.vim
+
+" *Speeddating*
+" let g:speeddating_no_mappings=1
 
 " *GnuPG*
 source $XDG_CONFIG_HOME/vim/conf.d/gnupg.vim
