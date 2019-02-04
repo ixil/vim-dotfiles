@@ -76,7 +76,7 @@ let g:alternate_nomap = 1
 source $XDG_CONFIG_HOME/vim/conf.d/nerdtree.vim
 
 " *Gitgutter*
-source $XDG_CONFIG_HOME/vim/conf.d/gitgutter.vim
+" source $XDG_CONFIG_HOME/vim/conf.d/gitgutter.vim
 
 " *Signify*
 source $XDG_CONFIG_HOME/vim/conf.d/signify.vim
