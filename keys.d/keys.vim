@@ -116,10 +116,10 @@ inoremap <C-q> <C-x>
 
 " TODO Map these to something useful?
 " TODO Map these to something useful?
-noremap <Up> <plug>(signify-next-hunk)
-noremap <Down> <plug>(signify-prev-hunk)
-" noremap <Up> :GitGutterPrevHunk<CR>
-" noremap <Down> :GitGutterNextHunk<CR>
+nmap <down> <plug>(signify-next-hunk)
+nmap <up> <plug>(signify-prev-hunk)
+" noremap <up> :GitGutterPrevHunk<CR>
+" noremap <down> :GitGutterNextHunk<CR>
 "TODO Maybe add with ALE?
 noremap <Right> :cnext<CR>
 noremap <Left> :cprev<CR>

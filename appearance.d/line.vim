@@ -22,11 +22,12 @@ let g:airline_theme='badwolf'
 let g:airline_theme='tomorrow'
 
 " TODO wrap in the 'if tmux'
-let airline#extensions#tmuxline#snapshot_file = "~/.config/tmux/tmux-statusline-colors.conf"
+let g:airline#extensions#tmuxline#enabled = 0
+" let airline#extensions#tmuxline#snapshot_file = "~/.config/tmux/tmux-statusline-colors.conf"
 
 " Explicitly specify which extensions to use
 " let g:airline_extensions = ['branch', 'tabline', 'ale', 'whitespace']
-let g:airline_extensions = ['branch', 'tabline', 'ale', 'csv', 'gutentags', 'hunks', 'nrrwrgn', 'quickfix', 'tagbar', 'tmuxline', 'whitespace',]
+let g:airline_extensions = ['branch', 'tabline', 'ale', 'csv', 'gutentags', 'hunks', 'nrrwrgn', 'quickfix', 'tagbar', 'whitespace',]
 
 " Tabline:
 " let airline#extensions#tabline#current_first = 1

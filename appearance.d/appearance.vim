@@ -76,11 +76,11 @@ let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
-let g:signify_sign_add                = emoji#for('small_blue_diamond')   " = '+'                  
-let g:signify_sign_change             = emoji#for('small_orange_diamond') " = '!'                  
-let g:signify_sign_delete             = emoji#for('small_red_triangle')   " = '_'                  
-let g:signify_sign_delete_first_line  = emoji#for('exclamation')          " = '‾'                  
-let g:signify_sign_changedelete       = emoji#for('collision')            " = g:signify_sign_change
+" let g:signify_sign_add                = emoji#for('small_blue_diamond')   " = '+'                  
+" let g:signify_sign_change             = emoji#for('small_orange_diamond') " = '!'                  
+" let g:signify_sign_delete             = emoji#for('small_red_triangle')   " = '_'                  
+" let g:signify_sign_delete_first_line  = emoji#for('exclamation')          " = '‾'                  
+" let g:signify_sign_changedelete       = emoji#for('collision')            " = g:signify_sign_change
 let g:signify_sign_show_count = 1
 let g:signify_sign_show_text = 1
 
