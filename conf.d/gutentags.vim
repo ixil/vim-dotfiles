@@ -9,6 +9,12 @@ let g:gutentags_cache_dir = expand('~/.cache/vim/gutentags/')
 let g:gutentags_modules = ['ctags', 'cscope', 'pycscope']
 
 " config project root markers.
+" let g:gutentags_file_list_command = {
+"             \ 'markers': {
+"             \ '.git': 'git ls-files',
+"             \ '.hg': 'hg locate',
+"             \ },
+"             \ }
 let g:gutentags_project_root = ['.root']
 let g:gutentags_plus_nomap = 1
 
