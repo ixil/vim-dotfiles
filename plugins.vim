@@ -122,7 +122,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'gilligan/vim-lldb'
 
  " Functionality:
-     " Plug 'vimwiki/vimwiki'
+     Plug 'vimwiki/vimwiki'
      Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " TODO
      Plug 'jceb/vim-orgmode'
      " TODO
@@ -184,7 +184,7 @@ call plug#begin('~/.local/share/vim/plugged')
  """ Status Line:
      Plug 'vim-airline/vim-airline'
      Plug 'vim-airline/vim-airline-themes'
-     Plug 'mg979/vim-xtabline'
+     " Plug 'mg979/vim-xtabline'
 
  " Unicode And Emojis:
      " Unicode character meta-data etc digraphs: C-k
@@ -261,6 +261,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'junegunn/fzf.vim'  " Register display tray
      Plug 'pbogut/fzf-mru.vim' "FZFMru
      Plug 'wakatime/vim-wakatime'
+     Plug 'blindFS/vim-taskwarrior'
+     Plug 'tbabej/taskwiki'
 
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'

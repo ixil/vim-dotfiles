@@ -161,7 +161,10 @@ source $XDG_CONFIG_HOME/vim/conf.d/utl_rc.vim
 source $XDG_CONFIG_HOME/vim/conf.d/switch.vim
 
 " *Speeddating*
-" let g:speeddating_no_mappings=1
+let g:speeddating_no_mappings=1
 
 " *GnuPG*
 source $XDG_CONFIG_HOME/vim/conf.d/gnupg.vim
+
+" *VirtualEnv*
+source $XDG_CONFIG_HOME/vim/conf.d/virtualenv.vim
