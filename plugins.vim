@@ -20,7 +20,7 @@ let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/
 call plug#begin('~/.local/share/vim/plugged')
 
 " Local Plugins:
-     Plug '~/dev/vim/Ultisnips', { 'as': 'custom/Ultisnips' }
+     " Plug '~/dev/vim/Ultisnips', { 'as': 'custom/Ultisnips' } " done with conf.d
 
  """ General Editing:
      " Plug 'Konfekt/FastFold' " Faster/Better folding

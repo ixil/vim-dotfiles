@@ -37,7 +37,7 @@ source $XDG_CONFIG_HOME/vim/functions.d/customFuncs.vim
 
 " Plugins:
 source $XDG_CONFIG_HOME/vim/plugins.vim
-source $XDG_CONFIG_HOME/vim/conf.d/plugsettings.vim
+source $XDG_CONFIG_HOME/vim/plugsettings.vim
 source $XDG_CONFIG_HOME/vim/functions.d/plugfuncs.vim
 source $XDG_CONFIG_HOME/vim/functions.d/autocompleteFixes.vim
 
