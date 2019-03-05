@@ -146,13 +146,23 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-nnoremap <silent> <Plug>(switch+date) :<C-U>if !switch#Switch()<Bar> call speeddating#increment(v:count1) <Bar>en<CR>
-nnoremap <silent> <Plug>(switch-date) :<C-U>if !switch#Switch({'reverse': 1})<Bar> call speeddating#increment(-v:count1) <Bar>en<CR>
+let g:speeddating_no_mappings=1 
+nmap d<C-A> <Plug>SpeedDatingNowUTC
+nmap d<C-X> <Plug>SpeedDatingNowLocal
+nnoremap <silent> <Plug>SpeedDatingFallbackUp <c-a>
+nnoremap <silent> <Plug>SpeedDatingFallbackDown <c-x>
+nnoremap <silent> <c-a> :if !switch#Switch() <bar> execute "normal \<Plug>SpeedDatingUp" <bar> endif <cr>
+nnoremap <silent> <c-x> :if !switch#Switch({'reverse': 1}) <bar> execute "normal \<Plug>SpeedDatingDown" <bar> endif <cr>
 
-nmap <silent><unique> <C-a> <Plug>(switch+date)
-nmap <silent><unique> <C-x> <Plug>(switch-date)
-xmap <silent><unique> <C-a> <Plug>SpeedDatingUp
-xmap <silent><unique> <C-x> <Plug>SpeedDatingDown
+" nnoremap <Plug>(switch+date) :if !switch#Switch() <bar>
+"       \ call speeddating#increment(v:count1) <bar> endif<cr>
+      " call speeddating#increment(v:count1) <Bar>en endif <CR>
+
+" nnoremap <Plug>(switch-date) :if !switch#Switch({'reverse': 1}) <bar>
+"       \ call speeddating#increment(-v:count1) <bar> endif<cr>
+      "\ call speeddating#increment(-v:count1) <bar> endif<cr>
+" nnoremap <Plug>(switch-date) :if !switch#Switch({'reverse': 1}) <bar>
+"       \ norm <Plug>SpeedDatingDown <bar> endif<cr>
 
 " autocmd FileType julia nmap <buffer> K <Plug>(JuliaDocPrompt)
 

@@ -1,34 +1,13 @@
 """ Source the stuff
 
 " Environment setup:
-
 source $XDG_CONFIG_HOME/vim/vimenv.vim
-"nmap ,b :bn<cr>
-"
-""let g:nd_themes = [
-""   \ ['6:00',  'PaperColor', 'light'],
-""   \ ['17:00', 'hybrid-sl', 'dark'],
-""   \ ]
-"let g:nd_themes = [
-"  \ ['6:00',  'PaperColor', 'light'],
-"  \ ['17:00', 'PaperColor', 'dark'],
-"  \ ]
-"
-"call plug#begin('~/.local/share/vim/plugged')
-" " Color Schemes:
-"    Plug 'nightsense/night-and-day'  " switch colorschemes based on time of day
-"     " PaperColor in the day, hybrid-sl at night
-"
-"     "Plug 'flazz/vim-colorschemes'
-"     Plug 'NLKNguyen/papercolor-theme'
-"     "Plug 'sloria/vim-hybrid'  
-"       "hybrid with easier-to-read line numbers
-"     "Plug 'noah/vim256-color' 
-    "     "Uses submodules so who knows...
-"     call plug#end()
-"colorscheme PaperColor
-"
-"finish
+
+source $XDG_CONFIG_HOME/vim/conf.d/general.vim
+if exists('g:use_alt')
+    "source $XDG_CONFIG_HOME/vim/alt.vim
+    "finish
+endif
 
 " General Settings:
 " set nocompatible " done already in /etc/vimrc

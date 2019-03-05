@@ -1,1 +1,5 @@
 https://github.com/zenbro/dotfiles/blob/master/.nvimrc#L151-L187
+make the latex 'command' textobj work 
+map enter in buffer window to split line, and shift-enter to split line up https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter
+
+https://github.com/KeitaNakamura/tex-conceal.vim
