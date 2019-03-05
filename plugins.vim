@@ -302,7 +302,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'vim-pandoc/vim-pandoc'
      Plug 'vim-pandoc/vim-pandoc-syntax' " May interfere with markdown
      Plug 'vim-pandoc/vim-pandoc-after'
-     let g:pandoc#after#modules#enabled = ["ultisnips"]
+     let g:pandoc#after#modules#enabled = ["ultisnips", "nrrwrgn", "tablemode"]
 
 
  """ Filetypes:
