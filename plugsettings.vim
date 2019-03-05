@@ -24,7 +24,6 @@
 " |GHDashboard|
 " |Pandoc|
 " |Litecorrect|
-" |EnhancedDiff|
 " |Ctrlsf|
 " |FZF|
 " |latex-unicoder.vim|
@@ -112,7 +111,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/pandoc.vim
 source $XDG_CONFIG_HOME/vim/conf.d/litecorrect.vim
 
 " *EnhancedDiff*
-source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
+" source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
 
 " *Ctrlsf*
 source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim

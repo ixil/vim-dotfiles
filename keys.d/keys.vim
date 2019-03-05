@@ -146,8 +146,13 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-nnoremap <c-a> :if !switch#Switch() <bar> call speeddating#increment() <bar> endif<cr>
-nnoremap <c-x> :if !switch#Switch({'reverse': 1}) <bar> call speeddating#decrement() <bar> endif<cr>
+nnoremap <silent> <Plug>(switch+date) :<C-U>if !switch#Switch()<Bar> call speeddating#increment(v:count1) <Bar>en<CR>
+nnoremap <silent> <Plug>(switch-date) :<C-U>if !switch#Switch({'reverse': 1})<Bar> call speeddating#increment(-v:count1) <Bar>en<CR>
+
+nmap <silent><unique> <C-a> <Plug>(switch+date)
+nmap <silent><unique> <C-x> <Plug>(switch-date)
+xmap <silent><unique> <C-a> <Plug>SpeedDatingUp
+xmap <silent><unique> <C-x> <Plug>SpeedDatingDown
 
 " autocmd FileType julia nmap <buffer> K <Plug>(JuliaDocPrompt)
 
