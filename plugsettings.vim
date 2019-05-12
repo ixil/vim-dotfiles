@@ -59,6 +59,8 @@ source $XDG_CONFIG_HOME/vim/conf.d/session.vim
 " *VimSnippets*
 source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
 
+" *mattn/emmet-vim
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/Templates/dev/emmet_snippets.json')), "\n"))
 " *Gutentags*
 source $XDG_CONFIG_HOME/vim/conf.d/gutentags.vim
 

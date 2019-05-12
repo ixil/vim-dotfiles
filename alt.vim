@@ -1,57 +1,157 @@
+echom "Running alternative config file..."
 
-True
+
+" General Settings:
+" set nocompatible " done already in /etc/vimrc
+source $XDG_CONFIG_HOME/vim/conf.d/general.vim
+source $XDG_CONFIG_HOME/vim/functions.d/customFuncs.vim
+
+
+
+""" VIMPLUG:
+" |plugfuncs.vim| should be called after
+" |plugsettings.vim| should for settings
+" |keys.vim| for the keybindings.
+
+" BuildYCM(info)
+function! BuildYCM(info)
+   " info is a dictionary with 3 fields
+   " - name:   name of the plugin
+   " - status: 'installed', 'updated', or 'unchanged'
+   " - force:  set on PlugInstall! or PlugUpdate!
+   if a:info.status == 'installed' || a:info.force
+     !./install.py --clang-completer --system-libclang --system-boost --js-completer --java-completer
+   endif
+endfunction
+
+" Assumes system installation of ycm
+let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 call plug#begin('~/.local/share/vim/plugged')
-     " for turning multiline code <-> into single line: gS, gJ
-     Plug 'AndrewRadev/splitjoin.vim'
-     Plug 'tpope/vim-speeddating'
-     Plug 'AndrewRadev/switch.vim'
+
+"  " Debugging:
+"      " Plug 'vim-vdebug/vdebug'
+     Plug 'gilligan/vim-lldb' , {'on': 'Lldbb'}
+
+ " Functionality:
+     Plug 'vimwiki/vimwiki'
+     Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " TODO
+     Plug 'jceb/vim-orgmode'
+     " TODO
+     Plug 'mattn/calendar-vim'
+     " TODO
+     Plug 'inkarkat/vim-SyntaxRange'
+     " Plug 'vim-scripts/OnSyntaxChange.vim'
+     " TODO
+     Plug 'tpope/vim-projectionist'
+     " TODO
+     Plug 'tpope/vim-dispatch'
+     Plug 'tpope/vim-sleuth'
+     Plug 'jamessan/vim-gnupg'
+
+ """ Text Objects:
+ " https://github.com/kana/vim-textobj-user/wiki
+ Plug 'kana/vim-textobj-user' |
+     Plug 'kana/vim-textobj-indent' "i,I
+     Plug 'kana/vim-textobj-entire' "e
+     Plug 'kana/vim-textobj-fold' "z
+     Plug 'kana/vim-textobj-lastpat' "/
+     Plug 'idbrii/textobj-word-column.vim' "c,C
+     Plug 'Julian/vim-textobj-brace' "j
+
+     Plug 'libclang-vim/vim-textobj-clang' ";, ;{m,c,f,e,s,p,n,u,a}
+     " TODO
+     Plug 'rbonvall/vim-textobj-latex' "\, $ math 
+    " q,Q single/double quoted
+    " e - envirenment (begin - end)
+     Plug 'jasonlong/vim-textobj-css' "c
+     Plug 'gaving/vim-textobj-argument'
+
+     Plug 'thalesmello/vim-textobj-methodcall'
+     " TODO
+     Plug 'kana/vim-textobj-function' "f,F
+     " TODO
+     Plug 'bps/vim-textobj-python' "f,c
+
+     Plug 'terryma/vim-expand-region' "J/K
+     Plug 'https://gist.github.com/ixil/5356298948576735b3713b01d668a399',
+                 \ { 'as': 'local/next_motion_mapping.vim', 'do': 'mkdir -p plugin; cp -f *.vim plugin/' }
+
+ """ Git Stuff:
+     Plug 'tpope/vim-fugitive'
+     "Plug 'tpope/vim-git' "For really old vims
+     "
+     Plug 'mhinz/vim-signify' " all other VCS
+     " Plug 'airblade/vim-gitgutter' " https://github.com/airblade/vim-gitgutter#hunks
+
+     Plug 'gregsexton/gitv', {'on': ['Gitv']}
+     Plug 'christoomey/vim-conflicted'
+     Plug 'junegunn/vim-github-dashboard'
+     Plug 'junegunn/gv.vim'  " gv to browse commit log
+
+ """ GUI Elements:
+     " GUI element
+     Plug 'mbadran/headlights'
+
+ """ Status Line:
+     Plug 'vim-airline/vim-airline'
+     Plug 'vim-airline/vim-airline-themes'
+     " Plug 'mg979/vim-xtabline'
+
+
+ " Tmux:
+     Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
+     Plug 'tmux-plugins/vim-tmux-focus-events'
+     Plug 'tmux-plugins/vim-tmux' " Filetype for .tmux.conf
+     "Plug 'benmills/vimux'
+
 call plug#end()
 
 
- "nnoremap <Plug>(switch+date) :if !switch#Switch() <bar>
- "      \ call speeddating#increment() <bar> endif<cr>
- "      " call speeddating#increment(v:count1) <Bar>en endif <CR>
- "
- "nnoremap <Plug>(switch-date) :if !switch#Switch() <bar> 
- "      \ call speeddating#increment(-v:count1) <bar> endif<cr>
- "      " \ call speeddating#increment(-v:count1) <bar> endif<cr>
- "" nnoremap <Plug>(switch-date) :if !switch#Switch({'reverse': 1}) <bar>
- ""       \ norm <Plug>SpeedDatingDown <bar> endif<cr>
- "
- "nmap <silent><unique> <C-a> <Plug>(switch+date)
- "nmap <silent><unique> <C-x> <Plug>(switch-date)
-" 0
-"2000-01-18
-let g:speeddating_no_mappings=1 
-nmap d<C-A> <Plug>SpeedDatingNowUTC
-nmap d<C-X> <Plug>SpeedDatingNowLocal
-nnoremap <silent> <Plug>SpeedDatingFallbackUp <c-a>
-nnoremap <silent> <Plug>SpeedDatingFallbackDown <c-x>
-nnoremap <silent> <c-a> :if !switch#Switch() <bar> execute "normal \<Plug>SpeedDatingUp" <bar> endif <cr>
-nnoremap <silent> <c-x> :if !switch#Switch({'reverse': 1}) <bar> execute "normal \<Plug>SpeedDatingDown" <bar> endif <cr>
+
+" Autoload Plugins:
+
+augroup load_us_ycm
+  autocmd!
+  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+                     \| autocmd! load_us_ycm
+augroup END
 
 
-""let g:nd_themes = [
-""   \ ['6:00',  'PaperColor', 'light'],
-""   \ ['17:00', 'hybrid-sl', 'dark'],
-""   \ ]
-"let g:nd_themes = [
-"  \ ['6:00',  'PaperColor', 'light'],
-"  \ ['17:00', 'PaperColor', 'dark'],
-"  \ ]
-"
-"call plug#begin('~/.local/share/vim/plugged')
-" " Color Schemes:
-"    Plug 'nightsense/night-and-day'  " switch colorschemes based on time of day
-"     " PaperColor in the day, hybrid-sl at night
-"
-"     "Plug 'flazz/vim-colorschemes'
-"     Plug 'NLKNguyen/papercolor-theme'
-"     "Plug 'sloria/vim-hybrid'  
-"       "hybrid with easier-to-read line numbers
-"     "Plug 'noah/vim256-color' 
-    "     "Uses submodules so who knows...
-"     call plug#end()
-"colorscheme PaperColor
-"
-"finish
+
+
+
+
+" Plugins:
+source $XDG_CONFIG_HOME/vim/plugsettings.vim
+source $XDG_CONFIG_HOME/vim/functions.d/plugfuncs.vim
+source $XDG_CONFIG_HOME/vim/functions.d/autocompleteFixes.vim
+
+" Keys:
+source $XDG_CONFIG_HOME/vim/keys.d/keys.vim
+
+" Apperance:
+" source $XDG_CONFIG_HOME/vim/appearance.d/appearance.vim
+" source $XDG_CONFIG_HOME/vim/appearance.d/line.vim
+
+
+" These may be something strange if initialised by some other program (-u setting)
+if has ('autocmd') " Remain compatible with earlier versions
+ augroup vimrc     " Source vim configuration upon save
+    autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
+    autocmd! BufWritePost $MYGVIMRC if has('gui_running') | so % | echom "Reloaded " . $MYGVIMRC | endif | redraw
+  augroup END
+endif " has autocmd
+
+map <leader>vimrc :tabe $MYVIMRC<cr>
+map <leader>tmux :tabe ~/.tmux.conf<cr>
+map <leader>vimso :so $MYVIMRC<cr>
+nmap <leader>zshrc :tabe $ZDOTDIR<cr>
+
+"if has ('autocmd') " Remain compatible with earlier versions
+" augroup vimrc     " Source vim configuration upon save
+"    autocmd! BufWritePost $VIMINIT source % | echom "Reloaded " . $MYVIMRC | redraw
+"    autocmd! BufWritePost $MYGVIMRC if has('gui_running') | so % | echom "Reloaded " . $MYGVIMRC | endif | redraw
+"  augroup END
+"endif " has autocmd
+

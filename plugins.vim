@@ -119,7 +119,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  " Debugging:
      " Plug 'vim-vdebug/vdebug'
-     Plug 'gilligan/vim-lldb'
+     " Plug 'gilligan/vim-lldb'
 
  " Functionality:
      Plug 'vimwiki/vimwiki'
@@ -263,6 +263,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'wakatime/vim-wakatime'
      Plug 'blindFS/vim-taskwarrior'
      Plug 'tbabej/taskwiki'
+     Plug 'pandysong/ghost-text.vim'
 
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
@@ -338,8 +339,9 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'guns/vim-sexp'
 
      "" Markdown:
-         Plug 'plasticboy/vim-markdown'
-         Plug 'mattly/vim-markdown-enhancements' " critic and multi markdown
+        " Use pandocs
+         " Plug 'plasticboy/vim-markdown'
+         " Plug 'mattly/vim-markdown-enhancements' " critic and multi markdown
      "Plug 'waylan/vim-markdown-extra-preview' " TODO
      "mj
              "Plug 'tpope/vim-markdown'       " Markdown
@@ -350,6 +352,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
      "" HEX Editing:
          Plug 'Shougo/vinarise.vim'
+
+     """ ROS
+         Plug 'taketwo/vim-ros'
 
  " Utilities:
      " TODO

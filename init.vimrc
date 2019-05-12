@@ -3,10 +3,12 @@
 " Environment setup:
 source $XDG_CONFIG_HOME/vim/vimenv.vim
 
-source $XDG_CONFIG_HOME/vim/conf.d/general.vim
+" let g:use_alt = '1'
+
 if exists('g:use_alt')
-    "source $XDG_CONFIG_HOME/vim/alt.vim
-    "finish
+    source $XDG_CONFIG_HOME/vim/alt.vim
+    echom "finishing"
+    finish
 endif
 
 " General Settings:
