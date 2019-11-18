@@ -60,12 +60,19 @@ source $XDG_CONFIG_HOME/vim/conf.d/session.vim
 source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
 
 " *mattn/emmet-vim
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/Templates/dev/emmet_snippets.json')), "\n"))
+source $XDG_CONFIG_HOME/vim/conf.d/emmet-vim.vim
+
 " *Gutentags*
 source $XDG_CONFIG_HOME/vim/conf.d/gutentags.vim
 
 " *Python_syntax*
 source $XDG_CONFIG_HOME/vim/conf.d/python_syntax.vim
+
+" *vim-ros
+source $XDG_CONFIG_HOME/vim/conf.d/ros.vim
+
+" *Rust-lang*
+source $XDG_CONFIG_HOME/vim/conf.d/rust-lang.vim
 
 " *Polyglot*
 let g:polyglot_disabled = ['tex', 'latex', 'python']
@@ -119,13 +126,13 @@ source $XDG_CONFIG_HOME/vim/conf.d/litecorrect.vim
 source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
 
 " *FZF*
-source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
+" source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
 
 " *latex-unicoder.vim*
 source $XDG_CONFIG_HOME/vim/conf.d/latex_unicoder.vim
 
 " *Peekaboo*
-let g:peekaboo_delay=300 " Delay the side window unless I'm really slow
+let g:peekaboo_delay=250 " Delay the side window unless I'm really slow
 
 " *EasyMotion*
 source $XDG_CONFIG_HOME/vim/conf.d/easymotion.vim
@@ -133,16 +140,20 @@ source $XDG_CONFIG_HOME/vim/conf.d/easymotion.vim
 " *YankRing*
 source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
 
+" *Incsearch*
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+
 " Slime
-let g:slime_target = "tmux"
-let g:slime_python_ipython = 1
+source $XDG_CONFIG_HOME/vim/conf.d/slime.vim
 
 " *Lion*
-let b:lion_squeeze_spaces = 1
+source $XDG_CONFIG_HOME/vim/conf.d/lion.vim
 
-" *textobj-clang*
-let g:textobj_clang_more_mappings=1
+" *lib-clang, textobj-clang, etc*
+source $XDG_CONFIG_HOME/vim/conf.d/clang-general.vim
 
+source $XDG_CONFIG_HOME/vim/conf.d/vim-cmake.vim
 " *CtrlSF*
 source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
 
@@ -161,11 +172,20 @@ source $XDG_CONFIG_HOME/vim/conf.d/utl_rc.vim
 " *Switch*
 source $XDG_CONFIG_HOME/vim/conf.d/switch.vim
 
+" *vimwiki*
+source $XDG_CONFIG_HOME/vim/conf.d/vimwiki.vim
+
 " *Speeddating*
 let g:speeddating_no_mappings=1
 
 " *GnuPG*
 source $XDG_CONFIG_HOME/vim/conf.d/gnupg.vim
 
+" *MatlabFilesEdition*
+autocmd BufEnter *.m    compiler mlint
+
 " *VirtualEnv*
 source $XDG_CONFIG_HOME/vim/conf.d/virtualenv.vim
+
+" *CppModern
+source $XDG_CONFIG_HOME/vim/conf.d/vim-cpp-modern.vim

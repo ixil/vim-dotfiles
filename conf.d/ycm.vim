@@ -2,7 +2,12 @@
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
 endif
+
 " let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+call extend(g:ycm_semantic_triggers, {
+            \ 'roslaunch' : ['="', '$(', '/'],
+            \ 'rosmsg,rossrv,rosaction' : ['re!^', '/'],
+            \ })
 
 " Modified from :put =string(g:vimetex#re#youcompleteme``)
 let g:ycm_semantic_triggers.tex = [
@@ -36,3 +41,8 @@ let g:ycm_semantic_triggers.tex = [
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
+
+"let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_cache = 0
+" use installed clangd, not YCM bundled clangd which doesn't get updates
+let g:ycmclangd_binary_path = exepath("clangd")

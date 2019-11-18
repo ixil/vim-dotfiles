@@ -9,6 +9,8 @@
 "     autocmd FileType text call lexical#init({ 'spell': 0 })
 " augroup END
 
+let g:lexical#spelllang = ['en_au', 'de']
+let g:lexical#spellfile = [ '/usr/share/dict/' ]
 let g:lexical#thesaurus = [ '~/.local/share/vim/thesaurus/mthesaur.txt' ]
 let g:tq_mthesaur_file="~/.local/share/vim/thesaurus/mthesaur.txt"
 let g:tq_online_backends_timeout = 0.4

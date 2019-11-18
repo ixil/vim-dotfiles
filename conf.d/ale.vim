@@ -16,15 +16,20 @@ let g:ale_pattern_options = {
 \ }
 let g:ale_fixers = {}
 let g:ale_linters = {}
+let g:ale_linters_ignore = {}
+
+let g:ale_parse_compile_commands=1
+let g:ale_linters_ignore.cpp = [ 'cquery', 'g\+\+', 'gcc', 'clazy']
+
 " let g:ale_linters.javascript = ['eslint']
-let g:ale_linters.python = ['flake8']
 " let g:ale_linters.html = []
-" let g:ale_fixers.javascript = ['prettier']
+let g:ale_linters.python = ['flake8']
+let g:ale_fixers.javascript = ['prettier']
+let g:ale_fixers.cpp = ['clang-format', 'clangtidy', 'trim_whitespace', 'uncrustify', 'remove_trailing_lines']
 let g:ale_fixers.python = ['black']
+let g:ale_fixers.css = ['prettier']
 " 'add_blank_lines_for_python_control_statements' - Add blank lines before control statements.
 " 'autopep8' - Fix PEP8 issues with autopep8.
 " 'black' - Fix PEP8 issues with black.
 " 'isort' - Sort Python imports with isort.
 " 'yapf' - Fix Python files with yapf.
-" let g:ale_fixers.css = ['prettier']
-
