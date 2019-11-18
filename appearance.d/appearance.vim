@@ -1,5 +1,48 @@
-" General apperance settinsg
-" set background=dark
+"  Apperance Settings:
+                                                                                              " {{{1
+
+" Terminal And GUI Options:
+                                                                                              " {{{1
+" Gui Options
+if has('gui_running')
+  source $XDG_CONFIG_HOME/vim/appearance.d/gui.vim
+else
+  " Cursor shape also check plugin wincent/terminus
+  " 0 -> blinking block. 1 -> blinking block (default). 2 -> steady block. 3 -> blinking underline.
+  " 4 -> steady underline. 5 -> blinking bar (xterm). 6 -> steady bar (xterm)
+  " TODO add some colors, replace -> red, visual -> blue/purple
+  " TODO check the term type - requires a patch TERM
+  " let &t_SI.="\e[5 q"  "Insert
+  " let &t_SR.="\e[4 q"   "Replace
+  " let &t_EI.="\e[1 q"  "NORMAL
+  " augroup myCmds
+    " optional reset cursor on start:
+    " au!
+    " autocmd VimEnter * silent !echo -ne "\e[2 q"
+  " augroup END
+
+  " 256color termcaps
+  if &term =~# '256color'
+    if ( &term =~# '^screen'  || &term =~# '^tmux' )
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+    else
+      set termguicolors " be hopeful it's already set
+    endif
+  endif
+endif
+
+" General:
+                                                                                              " {{{1
+
+
+" Visuals:                                                                                    " {{{2
+source $XDG_CONFIG_HOME/vim/appearance.d/fonts.vim
+source $XDG_CONFIG_HOME/vim/appearance.d/listchars.vim
+
+" Colorscheme:
+set background=dark
 colorscheme PaperColor
 " let g:nd_themes = [
 "   \ ['6:00',  'PaperColor', 'light'],
@@ -10,61 +53,15 @@ let g:nd_themes = [
   \ ['17:00', 'PaperColor', 'dark'],
   \ ]
 
-set stl+=%{ConflictedVersion()}
-
-" Gui Options
-if has('gui_running')
-    " No toolbar, menu bar, and scroll bar in GVim
-    set guioptions-=T
-    set guioptions-=l
-    set guioptions-=L
-    set guioptions-=m
-    set guioptions-=M
-    set guioptions-=r
-    set guioptions-=R
-    set guifont=iosevka\ 12
-    "set guifont=Consolas\ 12
-    "set guifont=Mononoki 12
-    "set guifont=Fira\ Mono\ 12
-    "set guifont=iosevka\ nerd
-    set listchars=tab:→\ 
-    set listchars+=eol:↲
-    set listchars+=nbsp:␣
-    set listchars+=extends:❯,precedes:❮
-    " set listchars+=trail:•
-    set showbreak=↪\ 
-else
-    let g:CSApprox_loaded = 1
-endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Listchars:
-" set listchars+=trail:◥
-"                trail:·
-set listchars=tab:▸\ 
-"             tab:»·
-set listchars+=eol:¬
-"              eol:★
-"              eol:¶
-set listchars+=extends:→,precedes:←
-"              extends:❯,precedes:❮
-"              extends:»,precedes:«
-set listchars+=nbsp:◥
-"              nbsp:_
-"              nbsp:+
-set showbreak=★★★
-"            =↪\  
-"            =+++     " Wrap-broken line prefix
-
-
-"vertical splits less gap between bars
+"vertical splits less gap between bars in the status bars
 set fillchars+=vert:│
-" Add a visual vertical line 1 column after textwidth
+" Add a visual vertical line 1 column after text width
 if exists('+colorcolumn')
     set colorcolumn=+1
 endif
 
-"Plugins:
+"Plugins Specifics:
+                                                                                              " {{{1
 
 "YCM:
 let g:ycm_error_symbol = '✗'
@@ -84,6 +81,13 @@ let g:gitgutter_sign_modified_removed = emoji#for('collision')
 let g:signify_sign_show_count = 1
 let g:signify_sign_show_text = 1
 
+                                                                                              " {{{1
+" Syntaxes And Highlights:
+
+" Make comments italic
+highlight Comment cterm=italic
+
+"Plugins Specifics:                                                                         " {{{2
 highlight link SignifyLineAdd             DiffAdd
 highlight link SignifyLineChange          DiffChange
 highlight link SignifyLineDelete          DiffDelete

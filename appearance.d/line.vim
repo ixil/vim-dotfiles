@@ -1,4 +1,6 @@
 
+set stl+=%{ConflictedVersion()}
+
 "Not Airline:
 function! s:fzf_statusline()
     " Override statusline as you like
