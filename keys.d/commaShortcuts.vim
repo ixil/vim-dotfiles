@@ -2,7 +2,8 @@
 "Move back and forth through previous and next buffers
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
-nnoremap <silent> ,x :bn<CR>" ," Surround a word with "quotes"
+" ," Surround a word with "quotes"
+nnoremap <silent> ,x :bn<CR>
 
 " Not Bound:
 
