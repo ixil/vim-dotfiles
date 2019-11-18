@@ -1,4 +1,4 @@
-""" General Settings """
+""" General Settings
 
 
 " Improves redrawing
@@ -15,6 +15,7 @@ set grepprg=rg\ --vimgrep
 
 " Leader
 let mapleader =" "
+let maplocalleader ="\\"
 
 " Filetype
 filetype plugin on
@@ -76,7 +77,8 @@ set noshowmode
 
 " Inbuilt thesaurus
 set thesaurus+=~/.local/share/vim/thesaurus/mthesaur.txt
-set diffopt+=internal,algorithm:patience
+" TODO wrap in version statement
+" set diffopt+=internal,algorithm:patience
 
 " Man
 " runtime ftplugin/man.vim
@@ -105,3 +107,6 @@ let g:netrw_browsex_viewer= "xdg-open"
 
 " Tex
 let g:tex_flavor = 'latex'
+
+" Doxygen
+let g:load_doxygen_syntax=1
