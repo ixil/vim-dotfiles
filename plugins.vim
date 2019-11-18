@@ -10,13 +10,16 @@ function! BuildYCM(info)
    " - status: 'installed', 'updated', or 'unchanged'
    " - force:  set on PlugInstall! or PlugUpdate!
    if a:info.status == 'installed' || a:info.force
-     !./install.py --clang-completer --system-libclang --system-boost --js-completer --java-completer
+     !python3 ./install.py --clangd-completer --clang-completer --system-libclang
    endif
 endfunction
 
 " Assumes system installation of ycm
 let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+if isdirectory('~/.local/share/vim/plugged') != 0
+    echoerr 'missing ~/.local/share/vim/plugged'
+endif
 call plug#begin('~/.local/share/vim/plugged')
 
 " Local Plugins:
@@ -36,6 +39,8 @@ call plug#begin('~/.local/share/vim/plugged')
      " Autocomplete search terms with <C-Tab>
      Plug 'vim-scripts/sherlock.vim'
 
+     " TODO
+     " https://github.com/svermeulen/vim-easyclip
      " Yank ring - use C-n/p to go back through copies "TODO
      " Plug 'skwp/YankRing.vim'
 
@@ -62,7 +67,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'tomtom/tcomment_vim'             " Commenting
      " Plug 'tpope/vim-commentary'          " Un/Comment stuff: gcc, gc<motion>,
      Plug 'tommcdo/vim-exchange'            " cx<movement> to exchange
-     Plug 'seb-mueller/kwbdi.vim'           " Better buffer delete with splits behaviour <leader>bd
+     " Plug 'seb-mueller/kwbdi.vim'           " Better buffer delete with splits behaviour <leader>bd
+     Plug 'qpkorr/vim-bufkill'
 
      " Multiple Cursors
      " Use <C-n,p,x> <A-n>
@@ -103,14 +109,18 @@ call plug#begin('~/.local/share/vim/plugged')
              """ Pretty things
              "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
              Plug 'ryanoasis/vim-devicons'
-             Plug 'tyok/nerdtree-ack'
-             "Plug 'taiansu/nerdtree-ag'
+             " Plug 'tyok/nerdtree-ack'
+             " Plug 'taiansu/nerdtree-ag'
 
      "" Diffing:
      Plug 'zhaocai/DirDiff.vim'              "Directory diff and file diff-er
      Plug 'vim-scripts/diffchanges.vim'      "Toggle show changes, and also create a patch
-     " Plug 'chrisbra/vim-diff-enhanced' " No longer required with vim 8.1
      Plug 'chrisbra/Recover.vim'            " Diff recovery files
+     if has("patch-8.1.0360")
+         set diffopt+=internal,algorithm:patience
+     else
+         Plug 'chrisbra/vim-diff-enhanced' " No longer required with vim 8.1
+     endif
 
 
  " --------------------------------------------------------------------------------
@@ -133,9 +143,11 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      Plug 'tpope/vim-projectionist'
      " TODO
-     Plug 'tpope/vim-dispatch'
      Plug 'tpope/vim-sleuth'
      Plug 'jamessan/vim-gnupg'
+
+     " Build, makeprg, compiler
+     Plug 'tpope/vim-dispatch'
 
  """ Text Objects:
  " https://github.com/kana/vim-textobj-user/wiki
@@ -144,6 +156,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'kana/vim-textobj-entire' "e
      Plug 'kana/vim-textobj-fold' "z
      Plug 'kana/vim-textobj-lastpat' "/
+     Plug 'kana/vim-textobj-function' "f,F
      Plug 'idbrii/textobj-word-column.vim' "c,C
      Plug 'Julian/vim-textobj-brace' "j
 
@@ -157,7 +170,6 @@ call plug#begin('~/.local/share/vim/plugged')
 
      Plug 'thalesmello/vim-textobj-methodcall'
      " TODO
-     Plug 'kana/vim-textobj-function' "f,F
      " TODO
      Plug 'bps/vim-textobj-python' "f,c
 
@@ -179,11 +191,12 @@ call plug#begin('~/.local/share/vim/plugged')
 
  """ GUI Elements:
      " GUI element
-     Plug 'mbadran/headlights'
+     " Plug 'mbadran/headlights'
 
  """ Status Line:
      Plug 'vim-airline/vim-airline'
      Plug 'vim-airline/vim-airline-themes'
+     " Plug 'itchyny/lightline.vim'
      " Plug 'mg979/vim-xtabline'
 
  " Unicode And Emojis:
@@ -197,6 +210,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      Plug 'junegunn/vim-emoji'
      Plug 'kyuhi/vim-emoji-complete'
+     Plug 'connorholyday/vim-snazzy'
 
 
  """ Syntax And Linting And Tags:
@@ -220,7 +234,10 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " Plug 'lifepillar/vim-mucomplete' 
      Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] } " TODO
-     Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}       " TODO
+     " TODO ARCH only
+     " Plug '/usr/share/vim/vimfiles/plugin/youcompleteme.vim', { 'as':'YouCompleteMe', 'on': [] }
+     " TODO
+     Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
      " Plug 'Cocophotos/vim-ycm-latex-semantic-completer'
      " Plug 'jeayae/color_coded', { 'do': 'rm -f CMakeCache.txt && cmake . && make && make install',\
      "    'for': ['cpp', 'objc', 'objcpp'], 'build_commands' : ['cmake', 'make']}
@@ -243,8 +260,10 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'bronson/vim-trailing-whitespace' " Remove trailing whitespace
 
  """ Pairwise Autocompleteion:
+     " TODO
      Plug 'jiangmiao/auto-pairs'
      " Plug 'raimondi/delimitmate' "Delimiters autocomplete. Many similar
+     "TODO augroup
      Plug 'tpope/vim-endwise', { 'on': [], 'for': [], 'as': 'endwise' } " End/do/endif etc autocompletition, load manually at end
 
  " Alignment And Tables:
@@ -255,23 +274,25 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'godlygeek/tabular'
 
  " Binaries Interfaces And Helpers:
+     Plug 'wincent/terminus'
      Plug 'junegunn/vim-peekaboo'  " Register display tray
-     " Plug '/usr/bin/fzf'
-     Plug '/usr/share/vim/vimfiles/plugin/fzf.vim',  { 'as': 'local/fzfbase' }  "basic usage
-     Plug 'junegunn/fzf.vim'  " Register display tray
+
+     " FZF
+     " TODO arch installed on the rtp, otherwise use nix
+     Plug '~/.nix-profile/share/vim-plugins/fzf-0.18.0',  { 'as': 'local/fzf.vim' }  "basic usage, in
+     " Plug '/usr/share/vim/vimfiles/plugin/fzf',  { 'as': 'local/fzf.vim' }  "basic usage, in
+     " Plug 'rayjzeng/fzf.vim'
+     Plug 'junegunn/fzf.vim' " requires junegunn/fzf::plugins/fzf.vim
      Plug 'pbogut/fzf-mru.vim' "FZFMru
+
      Plug 'wakatime/vim-wakatime'
      Plug 'blindFS/vim-taskwarrior'
      Plug 'tbabej/taskwiki'
-     Plug 'pandysong/ghost-text.vim'
+     " Plug 'pandysong/ghost-text.vim'
 
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
 
- " Run Things:
-     "Plug 'julienr/vim-cellmode'
-     Plug 'epeli/slimux'
-     "Plug 'jpalardy/vim-slime'
 
  " Tmux:
      Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
@@ -280,15 +301,19 @@ call plug#begin('~/.local/share/vim/plugged')
      "Plug 'benmills/vimux'
 
      " Inline REPL:
+     "Plug 'jpalardy/vim-slime'
      Plug 'metakirby5/codi.vim'
+     Plug 'epeli/slimux'
 
      "" Jupyter:
-     Plug 'wmvanvliet/jupyter-vim'
+     "Plug 'julienr/vim-cellmode'
+     "Plug 'jupyter-vim/jupyter-vim'
      " Plug 'szymonmaszke/vimpyter' "Jupyter
 
  """ Prose:
+     " TODO augroups
      Plug 'reedes/vim-lexical'
-     Plug 'reedes/vim-wordy'                 " TODO Probably don't need
+     " Plug 'reedes/vim-wordy'                 " TODO Probably don't need
      Plug 'Ron89/thesaurus_query.vim'        " <Leader>cs default mapping
      Plug 'dbmrq/vim-ditto'                  " TODO
      " Autocorrection
@@ -307,6 +332,15 @@ call plug#begin('~/.local/share/vim/plugged')
 
 
  """ Filetypes:
+     "" C/C++ clang
+     Plug 'bfrg/vim-cpp-modern'
+     Plug 'libclang-vim/vim-textobj-clang'
+     Plug 'libclang-vim/vim-textobj-function-clang'
+    " Plug 'vim-scripts/clang'
+    Plug 'lyuts/vim-rtags'
+     " Plug 'vhdirk/vim-cmake'
+     Plug 'farafonov-alexey/vim-cmake'
+
      "" Tag Languages: (HTML/CSS)
      Plug 'powerman/AnsiEsc.vim'  " Color ansi escape codes
          Plug 'Valloric/MatchTagAlways'
@@ -319,7 +353,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'plytophogy/vim-virtualenv'
          Plug 'vim-python/python-syntax'  " Improved python syntax
          Plug 'Vimjas/vim-python-pep8-indent'  " Proper python indenting
-         if has('python') ||  has('python3') | Plug 'davidhalter/jedi-vim' | endif
+         if has('python') ||  has('python3') | Plug 'davidhalter/jedi-vim', {'as':'dothis'} | endif
      " Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
      "" TeX:
@@ -331,6 +365,10 @@ call plug#begin('~/.local/share/vim/plugged')
      "" Javascript:
          Plug 'letientai299/vim-react-snippets' ", { 'branch': 'es6' }
          Plug 'pangloss/vim-javascript'
+
+     "" Rust
+         Plug 'rust-lang/rust.vim', {' for': 'rust'}
+         Plug 'racer-rust/vim-racer', {' for': 'rust'}
 
      "" JSON:
          Plug 'elzr/vim-json'
@@ -354,7 +392,8 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'Shougo/vinarise.vim'
 
      """ ROS
-         Plug 'taketwo/vim-ros'
+         " Plug 'taketwo/vim-ros'
+         Plug 'galou/vim-ros'
 
  " Utilities:
      " TODO
@@ -364,7 +403,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'kshenoy/vim-signature' " Marks
  " Window management
      Plug 'simeji/winresizer'
-     Plug 'dr-chip-vim-scripts/ZoomWin' "C-w o to zoom in/out
+     " Plug 'dr-chip-vim-scripts/ZoomWin' "C-w o to zoom in/out
+     Plug 'regedarek/ZoomWin' "C-w o to zoom in/out
 
  " Behavioural Looks:
      Plug 'chrisbra/NrrwRgn'           "focus on a narrow region
@@ -375,7 +415,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  "" Asthetics:
      " Plug 'Shougo/denite'
-     Plug 'edkolev/tmuxline.vim'
+     " Plug 'edkolev/tmuxline.vim'
      Plug 'Yggdroot/indentLine'
 
  "" Color Schemes:
@@ -386,13 +426,12 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'NLKNguyen/papercolor-theme'
      "Plug 'sloria/vim-hybrid'  " hybrid with easier-to-read line numbers
      "Plug 'noah/vim256-color' "Uses submodules so who knows...
+     Plug 'connorholyday/vim-snazzy'
 
 """ To Be Loaded Last:
 " endwise
 
 call plug#end()
-
-
 
 " Autoload Plugins:
 
