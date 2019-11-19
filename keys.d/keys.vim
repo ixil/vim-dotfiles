@@ -119,6 +119,10 @@ xmap gfp :exec 'pedit ' . expand('<cfile>')<CR>
 " Stolen from Steve Losh vimrc: https://bitbucket.org/sjl/dotfiles/src/tip/vim/.vimrc
 nnoremap <silent> <leader>q/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 "}}}
+"Autocorrect last error i_C-s: {{{4
+"From https://castel.dev/post/lecture-notes-1/
+inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
+"}}}
 " Always Used }}}2
 
 
