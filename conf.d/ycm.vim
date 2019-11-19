@@ -1,3 +1,4 @@
+g:ycm_filetype_blacklist={'notes': 1,  'unite': 1, 'tagbar': 1, 'qf': 1, 'text': 1, 'infolog': 1, 'mail': 1}
 
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
@@ -8,6 +9,9 @@ call extend(g:ycm_semantic_triggers, {
             \ 'roslaunch' : ['="', '$(', '/'],
             \ 'rosmsg,rossrv,rosaction' : ['re!^', '/'],
             \ })
+
+" pandoc citekeys
+let g:ycm_semantic_triggers.pandoc = ['@']
 
 " Modified from :put =string(g:vimetex#re#youcompleteme``)
 let g:ycm_semantic_triggers.tex = [
