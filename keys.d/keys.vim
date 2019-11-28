@@ -526,7 +526,7 @@ vmap <silent> <LocalLeader>cs <Plug>ThesaurusQueryReplaceVisual
 " TODO clashes/duplicated by the juliaL2U plugin?
 " nnoremap <Leader>l :call unicoder#start(0)<CR>
 nnoremap <localleader>l :call unicoder#start(0)<CR>
-inoremap <C-l> <Esc>:call unicoder#start(1)<CR>l
+inoremap <C-l> <Esc>:call unicoder#start(1)<CR>
 vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
 "}}}4
 
