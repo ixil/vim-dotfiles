@@ -52,11 +52,13 @@ nmap ,b :bp<cr>
 nmap ;b :bn<cr>
 "}}}4
 "controversial}}}3
+
 " General {{{3
+
 " Leader based {{{4
-" Save and Quit: TODO quit should maybe be removed - I do not use this
+" Save and Quit:
 " nnoremap <space>w :w<cr>
-nnoremap <space>q :q<cr>
+" nnoremap <space>q :q<cr>
 " leader based }}}4
 "Close and open splits easily{{{4
 nnoremap <silent> Q <C-W>c
