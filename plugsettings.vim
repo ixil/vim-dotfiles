@@ -59,6 +59,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/session.vim
 " *VimSnippets*
 source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
 
+" *Ultisnips*
+source $XDG_CONFIG_HOME/vim/conf.d/ultisnips.vim
+
 " *mattn/emmet-vim
 source $XDG_CONFIG_HOME/vim/conf.d/emmet-vim.vim
 
