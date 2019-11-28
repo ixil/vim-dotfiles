@@ -428,12 +428,13 @@ nnoremap <F8> :TagbarToggle<CR>
 " From konsole A-j/A-k
 " set <A-k>=k
 " set <A-j>=j
-nnoremap <ê> :m .+1<CR>==
-vnoremap <ê> :m '>+1<CR>gv=gv
-inoremap <ê> <Esc>:m .+1<CR>==gi
-nnoremap <ë> :m .-2<CR>==
-vnoremap <ë> :m '<-2<CR>gv=gv
-inoremap <ë> <Esc>:m .-2<CR>==gi
+" For console vim
+nnoremap ê :m .+1<CR>==
+vnoremap ê :m '>+1<CR>gv=gv
+inoremap ê <Esc>:m .+1<CR>==gi
+nnoremap ë :m .-2<CR>==
+vnoremap ë :m '<-2<CR>gv=gv
+inoremap ë <Esc>:m .-2<CR>==gi
 
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-k> <Esc>:m .-2<CR>==gi
@@ -442,13 +443,6 @@ nnoremap <A-j> :m .+1<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 "}}}4
-
-" Tabs selection {{{4
-" TODO check for lazyload alternative loading
-" map <silent><A-1> :tabn 1<cr>
-" map <silent><A-2> :tabn 2<cr>
-" map <silent><A-3> :tabn 3<cr>
-" }}}4
 
 
 " Plugin based {{{2
@@ -467,16 +461,21 @@ nmap <A-2> <Plug>AirlineSelectTab2
 nmap <A-3> <Plug>AirlineSelectTab3
   " nmap <leader>- <Plug>AirlineSelectPrevTab
   " nmap <leader>+ <Plug>AirlineSelectNextTab
-"}}}4
+" TODO check for lazyload alternative loading
+" map <silent><A-1> :tabn 1<cr>
+" map <silent><A-2> :tabn 2<cr>
+" map <silent><A-3> :tabn 3<cr>
+" }}}4
+
 " ALE: h/l to go through syntax problems        {{{4
 " set <A-h>=h
 " set <A-l>=l
-nmap <silent> <è> <Plug>(ale_previous_wrap)
+nmap <silent> è <Plug>(ale_previous_wrap)
 nmap <silent> <A-h> <Plug>(ale_previous_wrap)
-nmap <silent> <ì> <Plug>(ale_next_wrap)
+nmap <silent> ì <Plug>(ale_next_wrap)
 nmap <silent> <A-l> <Plug>(ale_next_wrap)
 "ale}}}4
-
+"
 " Autocompleted Quotes Jump: " TODO fix for terminal vim        {{{4
 " TODO: Should set an alternative when not in gui
 let g:AutoPairsShortcutFastWrap = '<M-e>'
