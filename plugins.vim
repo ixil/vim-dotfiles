@@ -15,7 +15,7 @@ function! BuildYCM(info)
 endfunction
 
 " Assumes system installation of ycm
-let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 if isdirectory('~/.local/share/vim/plugged') != 0
     echoerr 'missing ~/.local/share/vim/plugged'

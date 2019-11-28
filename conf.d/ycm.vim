@@ -1,8 +1,15 @@
-g:ycm_filetype_blacklist={'notes': 1,  'unite': 1, 'tagbar': 1, 'qf': 1, 'text': 1, 'infolog': 1, 'mail': 1}
+" autocmd CmdwinEnter * inoremap <expr><buffer> <TAB>
+"             \ pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_collect_identifiers_from_tags_files = 1
+" let let g:ycm_language_server = []
+let g:ycm_filetype_blacklist={'notes': 1,  'unite': 1, 'tagbar': 1, 'qf': 1, 'text': 1, 'infolog': 1, 'mail': 1}
 
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
 endif
+
 
 " let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 call extend(g:ycm_semantic_triggers, {
@@ -49,4 +56,4 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 "let clangd fully control code completion
 let g:ycm_clangd_uses_ycmd_cache = 0
 " use installed clangd, not YCM bundled clangd which doesn't get updates
-let g:ycmclangd_binary_path = exepath("clangd")
+" let g:ycmclangd_binary_path = exepath("clangd")
