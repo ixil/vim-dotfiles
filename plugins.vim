@@ -358,6 +358,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
      "" TeX:
          Plug 'lervag/vimtex'
+         Plug 'KeitaNakamura/tex-conceal.vim'
 
      "" Julia:
          Plug 'JuliaEditorSupport/julia-vim'
