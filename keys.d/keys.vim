@@ -16,7 +16,6 @@
 " <C-H>, <C-W>, <C-U> - delete character,word/until start of line
 " <C-W>, <C-U> - delete word/until start of line
 " <C-R> + <C-P><C-O> insert register literally /fix indent
-" <C-R> + <C-P><C-O> insert register literally /fix indent
 " <C-_> change language
 " <C-]> trigger abbrev
 " Completion submodes: <C-X> + <C-   LNKT]FDVUO   > {{{3
@@ -77,21 +76,26 @@ nnoremap <C-l> <C-w>l
 " Always Used: But does not include plugin based {{{2
 
 " Passives: {{{4
+
+"visual align {{{5
 vnoremap > >gv
 vnoremap < <gv
 vnoremap < <gv
 
-" Group backslashing for regexes
+" ;\ Group backslashing for regexes {{{5
 cmap ;\ \(\)<Left><Left>
 
-" cnoremap w!! w !sudo tee > /dev/null %
+" Use Eunuch plugin instead for :SudoWrite{{{5
+" cmap w!! w !sudo tee > /dev/null %
 
 "passives }}}4
+
 " Amazing {{{4
 "Clear current search highlight by double tapping // {{{5
 nmap <silent> // :nohlsearch<CR>
 
-" Useful in conjunction with the . command{{{5
+" Replace/delete repeatable: {{{5
+" Useful in conjunction with the . command
 nnoremap c* /\<<C-r>=expand('<cword>')<CR>\>\C<CR>``cgn
 nnoremap c# ?\<<C-r>=expand('<cword>')<CR>\>\C<CR>``cgN
 nnoremap d* /\<<C-r>=expand('<cword>')<CR>\>\C<CR>``dgn
@@ -107,28 +111,29 @@ nmap "<C-g>P :put =expand('%:p')<CR>
 vmap "<C-g>p :put =expand('%:p')<CR>
 imap <C-R><C-g> <Esc>"<C-g>p"i
 
-" Edit/create file under cursor {{{4
+" Edit/create file under cursor {{{5
 nmap <leader>gf :e <cfile><cr>
 xmap <leader>gf <Esc>:e <C-R>*<cr>
-
-" Edit in the preview window file under cursor
+" Edit in the preview window file under cursor {{{5
 nmap gfp :exec 'pedit ' . expand('<cfile>')<CR>
 xmap gfp :exec 'pedit ' . expand('<cfile>')<CR>
-"}}}4
-"amazing }}}4"
-" Open a Quickfix window for the last search.                   {{{4
+
+" Open a Quickfix window for the last search.                   {{{5
 " TODO incorporate FZF?
 " Stolen from Steve Losh vimrc: https://bitbucket.org/sjl/dotfiles/src/tip/vim/.vimrc
 nnoremap <silent> <leader>q/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 "}}}
-"Autocorrect last error i_C-s: {{{4
+"Autocorrect last error i_C-s: {{{5
 "From https://castel.dev/post/lecture-notes-1/
 inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 "}}}
-" Always Used }}}2
+"}}}4
+"amazing }}}4"
+
+" }}}2 Always Used
 
 
-" Window:
+" Window:{{{3
 " Start windows resize mode
 let g:winresizer_start_key = '<C-w><C-v>'
 " let g:winresizer_gui_start_key = 'C-Z'
@@ -137,6 +142,7 @@ nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
 nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
+"}}}
 
 
 " FZF:                                              {{{2
@@ -148,11 +154,6 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 "}}}4
-
-"" FZF-Mru                      {{{4
-map <leader>p :FZFMru<cr>
-map <leader>x :Buffers<cr>
-"}}}
 " Insert mode completion            {{{3
 "TODO do we want the #vim#complete#({extra options}) ??
 
@@ -165,11 +166,15 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'right': '15%'})
 
 "}}}3
-"Leader Binds {{{3
-"  let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 
-"TODO    <space><space> clashes with EasyMotion
+"Leader Binds {{{2
+"  let g:fzf_nvim_statusline = 0 " disable statusline overwriting
+"" FZF-Mru                      {{{4
+map <leader>p :FZFMru<CR>
+"}}}
+
   nnoremap <silent> <leader>F :Files<CR>
+" set to x as on dvorak->qwerty that's a 'b' otherwise it messes with Bufkill
   nnoremap <silent> <leader>x :Buffers<CR>
   nnoremap <silent> <leader>gl :Commits<CR>
   nnoremap <silent> <leader>ga :BCommits<CR>
@@ -184,6 +189,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 
 " FZF Ag  {{{3
+"TODO
 "Search with Ag                                                     {{{4
 "   nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
 "}}}
@@ -228,7 +234,7 @@ nnoremap <silent> <leader>qa/ :execute "Ag! '" . substitute(substitute(substitut
 " Language Specific {{{2
 " Plugin based binds {{{3
 " python {{{4
-" TODO
+" TODO: replace specific with ALE/YCM binds?
 " Jedi:
 " let g:jedi#goto_command = "<leader>d"
 " let g:jedi#goto_assignments_command = "<leader>g"
@@ -258,12 +264,7 @@ let g:jedi#rename_command = "<c-c>r"
 
 
 " General Plugins Binds {{{2
-" incsearch                                         {{{4
-noremap <silent><expr> z/ incsearch#go(<SID>config_fuzzyall())
-noremap <silent><expr> z? incsearch#<go(<SID>config_fuzzyall({'command': '?'}))
-noremap <silent><expr> zg? incsearch#go(<SID>config_fuzzyall({'is_stay': 1}))
-noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
-"}}}
+
 " EasyAlign / Lion:                   {{{4
 " Start interactive EasyAlign in visual mode (e.g. vipga) (can use C-X to get regexp prompt)
 " xmap gl <Plug>(EasyAlign)
@@ -272,9 +273,11 @@ noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 let g:lion_map_right = 'gl'
 let g:lion_map_left = 'gL'
 "}}}4
-" Fuzzy Incsearch: {{{4
-" Requires the fuzzy inc function
 
+
+" Fuzzy Incsearch: {{{4
+
+" incsearch                                         {{{4
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -286,9 +289,16 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
+" TODO why doubled?
+" Requires the fuzzy inc function
+noremap <silent><expr> z/ incsearch#go(<SID>config_fuzzyall())
+noremap <silent><expr> z? incsearch#<go(<SID>config_fuzzyall({'command': '?'}))
+noremap <silent><expr> zg? incsearch#go(<SID>config_fuzzyall({'is_stay': 1}))
+noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 map z/ <Plug>(incsearch-fuzzyspell-/)
 map z? <Plug>(incsearch-fuzzyspell-?)
 map zg/ <Plug>(incsearch-fuzzyspell-stay)
+"}}}
 
 " Type zl to toggle highlighting on/off. " TODO Mapping used
 nnoremap zl :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
@@ -329,6 +339,7 @@ nmap sk :SplitjoinSplit<cr>
 "}}}4
 
 " Signature Marks:{{{4
+"TODO Clashes with  dispatch m?
   let g:SignatureMap = {
     \ 'Leader'             :  "m",
     \ 'PlaceNextMark'      :  "m,",
@@ -360,6 +371,41 @@ nmap sk :SplitjoinSplit<cr>
 nmap <silent> gcp <c-_>p
 "tcomment}}}4
 
+" TODO: YouCompleteMe YCM: {{{4
+" let g:ycm_key_list_stop_completion = ['<C-y>']
+  " let g:ycm_key_invoke_completion = '<C-Space>'
+  " let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
+  " let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+  let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+  " let g:ycm_key_detailed_diagnostics = '<leader>d'
+" The default value for g:UltiSnipsJumpBackwardTrigger interferes with the
+" built-in complete function: |i_CTRL-X_CTRL-K|. A workaround is to add the
+" following to your vimrc file or switching to a plugin like Supertab or
+" YouCompleteMe. >
+"    inoremap <c-x><c-k> <c-x><c-k>
+   " g:UltiSnipsExpandTrigger               <tab>
+   " g:UltiSnipsListSnippets                <c-tab>
+   " g:UltiSnipsJumpForwardTrigger          <c-j>
+   " g:UltiSnipsJumpBackwardTrigger         <c-k>
+" }}}
+
+" <C-A> and <C-X>  {{{4
+" Clever token switch/increment, also see and modify ../conf.d/switch.vim
+" Sets the timestamp under the cursor to UTC/Local now
+"TODO better mnemonic for now
+nmap d<C-A> <Plug>SpeedDatingNowUTC
+nmap d<C-X> <Plug>SpeedDatingNowLocal
+
+" Switch and Speeddating fallback mappings
+nnoremap <silent> <Plug>SpeedDatingFallbackUp <c-a>
+nnoremap <silent> <Plug>SpeedDatingFallbackDown <c-x>
+nnoremap <silent> <c-a> :if !switch#Switch() <bar> execute "normal \<Plug>SpeedDatingUp" <bar> endif <cr>
+nnoremap <silent> <c-x> :if !switch#Switch({'reverse': 1}) <bar> execute "normal \<Plug>SpeedDatingDown" <bar> endif <cr>
+
+"}}}
+
+
 " MultiCursor:{{{4
 " Turn off default key mappings
 let g:multi_cursor_use_default_mapping=0
@@ -382,22 +428,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " General plugins binds }}}2
 
 " Function Keys and Special Keys {{{2
-
-" <C-A> and <C-X>  {{{4
-" Clever token switch/increment, also see and modify ../conf.d/switch.vim
-" Sets the timestamp under the cursor to UTC/Local now
-"TODO better mnemonic for now
-nmap d<C-A> <Plug>SpeedDatingNowUTC
-nmap d<C-X> <Plug>SpeedDatingNowLocal
-
-" Switch and Speeddating fallback mappings
-nnoremap <silent> <Plug>SpeedDatingFallbackUp <c-a>
-nnoremap <silent> <Plug>SpeedDatingFallbackDown <c-x>
-nnoremap <silent> <c-a> :if !switch#Switch() <bar> execute "normal \<Plug>SpeedDatingUp" <bar> endif <cr>
-nnoremap <silent> <c-x> :if !switch#Switch({'reverse': 1}) <bar> execute "normal \<Plug>SpeedDatingDown" <bar> endif <cr>
-
-"}}}
-
 " Arrow keys {{{4
 
 " TODO re-Map these to something useful?
