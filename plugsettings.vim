@@ -44,8 +44,8 @@ source $XDG_CONFIG_HOME/vim/conf.d/ros.vim
 " *Rust-lang*
 source $XDG_CONFIG_HOME/vim/conf.d/rust-lang.vim
 
-" *Polyglot*
-let g:polyglot_disabled = ['tex', 'latex', 'python']
+" *Polyglot* settings must be set first
+source $XDG_CONFIG_HOME/vim/conf.d/polyglot-langs.vim
 
 " *A_Alternate*
 let g:alternate_nomap = 1

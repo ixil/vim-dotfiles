@@ -1,25 +1,22 @@
 """ VIMPLUG:
-" |plugfuncs.vim| should be called after
+" |plug-buildfuncs.vim| contains update/install hooks
+" |plugfuncs.vim| should be called after, contains plugin specific functions
 " |plugsettings.vim| should for settings
 " |keys.vim| for the keybindings.
-
-" BuildYCM(info)
-function! BuildYCM(info)
-   " info is a dictionary with 3 fields
-   " - name:   name of the plugin
-   " - status: 'installed', 'updated', or 'unchanged'
-   " - force:  set on PlugInstall! or PlugUpdate!
-   if a:info.status == 'installed' || a:info.force
-     !python3 ./install.py --clangd-completer --clang-completer --system-libclang
-   endif
-endfunction
-
-" Assumes system installation of ycm
-" let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
 if isdirectory('~/.local/share/vim/plugged') != 0
     echoerr 'missing ~/.local/share/vim/plugged'
 endif
+
+" Build Funcs:
+source $XDG_CONFIG_HOME/vim/functions.d/plug-buildfuncs.vim
+
+
+" Preload Settings:
+source $XDG_CONFIG_HOME/vim/conf.d/polyglot.vim
+" Assumes system installation of ycm TODO
+" let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" Plug Load:
 call plug#begin('~/.local/share/vim/plugged')
 
 " Local Plugins:
@@ -321,7 +318,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " let g:loaded_autocorrect = 1 " autocorrection off==1
      Plug 'panozzaj/vim-autocorrect'
      " Plug 'reedes/vim-litecorrect'
-     Plug 'sheerun/vim-polyglot'
+     Plug 'ixil/vim-polyglot', { 'do': function('BuildPolyglot') }
      " Consider languages in polyglot eg. let g:polyglot_disabled = ['css']
 
  " Pandoc:
@@ -333,7 +330,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  """ Filetypes:
      "" C/C++ clang
-     Plug 'bfrg/vim-cpp-modern'
+     " Plug 'bfrg/vim-cpp-modern' "TODO Polyglot, this supports /20
      Plug 'libclang-vim/vim-textobj-clang'
      Plug 'libclang-vim/vim-textobj-function-clang'
     " Plug 'vim-scripts/clang'
@@ -351,8 +348,8 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'fs111/pydoc.vim'
          Plug 'tmhedberg/SimpylFold'
          Plug 'plytophogy/vim-virtualenv'
-         Plug 'vim-python/python-syntax'  " Improved python syntax
-         Plug 'Vimjas/vim-python-pep8-indent'  " Proper python indenting
+         " Plug 'vim-python/python-syntax'  " Improved python syntax Polyglot
+         " Plug 'Vimjas/vim-python-pep8-indent'  " Proper python indenting: Polyglot
          if has('python') ||  has('python3') | Plug 'davidhalter/jedi-vim', {'as':'dothis'} | endif
      " Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
@@ -361,14 +358,14 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'KeitaNakamura/tex-conceal.vim'
 
      "" Julia:
-         Plug 'JuliaEditorSupport/julia-vim'
+         " Plug 'JuliaEditorSupport/julia-vim' "Polyglot
 
      "" Javascript:
          Plug 'letientai299/vim-react-snippets' ", { 'branch': 'es6' }
-         Plug 'pangloss/vim-javascript'
+         " Plug 'pangloss/vim-javascript' "Polyglot
 
      "" Rust
-         Plug 'rust-lang/rust.vim', {' for': 'rust'}
+         " Plug 'rust-lang/rust.vim', {' for': 'rust'} "Polyglot
          Plug 'racer-rust/vim-racer', {' for': 'rust'}
 
      "" JSON:
