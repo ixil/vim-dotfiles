@@ -221,6 +221,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'ervandew/supertab'                                      " TODO
      Plug 'sirver/ultisnips', { 'on': [] } " Note: YCM + ultisnips require settings to work together
      Plug 'honza/vim-snippets'
+
      " TODO
      "Plug 'sickill/vim-pasta'
      " TODO
@@ -230,7 +231,7 @@ call plug#begin('~/.local/share/vim/plugged')
          " Plug 'prabirshrestha/asyncomplete-lsp.vim
 
      " Plug 'lifepillar/vim-mucomplete' 
-     Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] } " TODO
+     Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] }
      " TODO ARCH only
      " Plug '/usr/share/vim/vimfiles/plugin/youcompleteme.vim', { 'as':'YouCompleteMe', 'on': [] }
      " TODO
@@ -250,8 +251,10 @@ call plug#begin('~/.local/share/vim/plugged')
      " For english/endings find/replace
      Plug 'tpope/vim-abolish'
      " Plug 'jelkins/vim-correction'
+
      " Increment Dates with CTRL-A/X
      Plug 'tpope/vim-speeddating'
+     Plug 'AndrewRadev/switch.vim'
 
 
      Plug 'bronson/vim-trailing-whitespace' " Remove trailing whitespace
@@ -306,6 +309,9 @@ call plug#begin('~/.local/share/vim/plugged')
      "Plug 'julienr/vim-cellmode'
      "Plug 'jupyter-vim/jupyter-vim'
      " Plug 'szymonmaszke/vimpyter' "Jupyter
+
+     """ Documentation:
+    Plug 'kkoomen/vim-doge' "TODO configure
 
  """ Prose:
      " TODO augroups
@@ -375,7 +381,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'guns/vim-sexp'
 
      "" Markdown:
-        " Use pandocs
+        " Use pandoc instead
          " Plug 'plasticboy/vim-markdown'
          " Plug 'mattly/vim-markdown-enhancements' " critic and multi markdown
      "Plug 'waylan/vim-markdown-extra-preview' " TODO
@@ -396,7 +402,6 @@ call plug#begin('~/.local/share/vim/plugged')
  " Utilities:
      " TODO
      " Plug 'AndrewRadev/sideways.vim'
-     Plug 'AndrewRadev/switch.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
  " Window management

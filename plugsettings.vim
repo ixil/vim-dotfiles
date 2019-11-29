@@ -102,7 +102,7 @@ let g:peekaboo_delay=250 " Delay the side window unless I'm really slow
 source $XDG_CONFIG_HOME/vim/conf.d/easymotion.vim
 
 " *YankRing*
-source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
+" source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
 
 " *Incsearch*
 set hlsearch
@@ -118,6 +118,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/lion.vim
 source $XDG_CONFIG_HOME/vim/conf.d/clang-general.vim
 
 source $XDG_CONFIG_HOME/vim/conf.d/vim-cmake.vim
+
 " *CtrlSF*
 source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
 

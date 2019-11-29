@@ -455,7 +455,7 @@ nnoremap <F8> :TagbarToggle<CR>
 " }}}4
 " }}}2
 
-" Uses Meta: {{{1
+" Uses Meta: Won't work in terminal vim (Meta sent as  <Esc>) {{{1
 " Move Lines:       {{{4
 " From konsole A-j/A-k
 " set <A-k>=k
@@ -484,6 +484,7 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 " Hit Alt-Shift-A then type a character you want to align by set <A-A>=A
 nmap <A-A> :Tabularize /
 vmap <A-A> :Tabularize /
+
 "}}}4
 
 " Tabs selection {{{4
