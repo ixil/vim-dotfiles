@@ -77,14 +77,12 @@ set noshowmode
 
 " Inbuilt thesaurus
 set thesaurus+=~/.local/share/vim/thesaurus/mthesaur.txt
-" TODO wrap in version statement
-" set diffopt+=internal,algorithm:patience
 
-" Man
+" Man:
 " runtime ftplugin/man.vim
 set keywordprg=:Man " Sets 'K' to use the :Man command and load the man page in a split
 
-" Finding Files
+" Finding Files:
 set path+=**
 set wildmenu     " visual autocomplete for command menu
 

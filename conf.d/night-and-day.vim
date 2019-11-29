@@ -1,0 +1,1 @@
+let g:colorscheme_switcher_define_mappings=0

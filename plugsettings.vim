@@ -74,9 +74,6 @@ source $XDG_CONFIG_HOME/vim/conf.d/vimtex.vim
 " *Plasticboy-vim-markdown*
 source $XDG_CONFIG_HOME/vim/conf.d/markdown.vim
 
-" *Lexical* *Thesaurus-Query*
-source $XDG_CONFIG_HOME/vim/conf.d/lexical.vim
-
 " *YCM*
 source $XDG_CONFIG_HOME/vim/conf.d/ycm.vim
 
@@ -90,10 +87,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/pandoc.vim
 source $XDG_CONFIG_HOME/vim/conf.d/litecorrect.vim
 
 " *EnhancedDiff*
-" source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
-
-" *Ctrlsf*
-source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
+source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
 
 " *FZF*
 " source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
@@ -159,3 +153,11 @@ source $XDG_CONFIG_HOME/vim/conf.d/virtualenv.vim
 
 " *CppModern
 source $XDG_CONFIG_HOME/vim/conf.d/vim-cpp-modern.vim
+
+" Aesthetics:
+
+" vim-operator-highlight
+source $XDG_CONFIG_HOME/vim/conf.d/operator-highlight.vim
+
+" NightAndDay:
+source $XDG_CONFIG_HOME/vim/conf.d/night-and-day.vim

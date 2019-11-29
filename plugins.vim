@@ -411,18 +411,19 @@ call plug#begin('~/.local/share/vim/plugged')
          " Plug 'junegunn/limelight.vim' " Goes with Goyo
          Plug 'ekaj2/limelight.vim' " Goes with Goyo
 
- "" Asthetics:
+ "" Aesthetics:
      " Plug 'Shougo/denite'
      " Plug 'edkolev/tmuxline.vim'
      Plug 'Yggdroot/indentLine'
+     Plug 'Valloric/vim-operator-highlight'
 
  "" Color Schemes:
-    " Plug 'nightsense/night-and-day'  " switch colorschemes based on time of day
+    Plug 'nightsense/night-and-day'  " switch colorschemes based on time of day
      " PaperColor in the day, hybrid-sl at night
 
      ""Plug 'flazz/vim-colorschemes'
      Plug 'NLKNguyen/papercolor-theme'
-     "Plug 'sloria/vim-hybrid'  " hybrid with easier-to-read line numbers
+     Plug 'sloria/vim-hybrid'  " hybrid with easier-to-read line numbers
      "Plug 'noah/vim256-color' "Uses submodules so who knows...
      Plug 'connorholyday/vim-snazzy'
 
