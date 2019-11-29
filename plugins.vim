@@ -179,6 +179,11 @@ call plug#begin('~/.local/share/vim/plugged')
 
  """ Git Stuff:
      Plug 'tpope/vim-fugitive'
+     "TODO github api in .netrc
+     Plug 'tpope/vim-rhubarb'
+     "TODO github api in .vimrc
+     Plug 'shumphrey/fugitive-gitlab.vim'
+     Plug 'kmARC/vim-fubitive'
      "Plug 'tpope/vim-git' "For really old vims
      "
      Plug 'mhinz/vim-signify' " all other VCS
