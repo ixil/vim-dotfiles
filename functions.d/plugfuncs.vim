@@ -222,3 +222,6 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 
+" Emojify: requires vim-emoji-ab
+command! -range Emojify <line1>,<line2>s/:\([^:]\+\):/\=gh_emoji#for(submatch(1), submatch(0))/g
+

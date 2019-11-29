@@ -593,10 +593,6 @@ nnoremap <expr> <silent> dd (getline('.') =~ '^$' ? '"_' : '').'dd'
 " }}}2
 
 " Disabled {{{2
-"" Emojify Command definiton    {{{4
-" TODO this is not a mapping this should be moved elsewhere
-" Emojify() %s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
-"}}}
 
 " Ditto: TODO                                    {{{4
 " Use autocmds to check your text automatically and keep the highlighting
@@ -644,10 +640,7 @@ nnoremap <expr> <silent> dd (getline('.') =~ '^$' ? '"_' : '').'dd'
 "undotreecustommap}}}4
 
 " Emojify: TODO {{{4
-" imap <C-X><C-E> call(emoji#complete<cr>)
-" <Plug>() 
-" %s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
-"}}}4
+" imap <C-X><C-E> call(gh_emoji#complete<cr>)
 
 " Emmet-vim TODO {{{4
 " let g:user_emmet_leader_key='<C-Z>'

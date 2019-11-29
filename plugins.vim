@@ -211,12 +211,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      " F4, Digraph, <C-X><C-G> <C-X><C-Z> <C-X><C-U> 
      Plug 'chrisbra/unicode.vim'
-
-     " TODO
-     Plug 'junegunn/vim-emoji'
-     Plug 'kyuhi/vim-emoji-complete'
-     Plug 'connorholyday/vim-snazzy'
-
+     Plug 'https://gitlab.com/gi1242/vim-emoji-ab'
 
  """ Syntax And Linting And Tags:
      " TODO

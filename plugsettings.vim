@@ -2,52 +2,19 @@
 " Some things change keys, these go into the keys.vimrc
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" *Index*
-" |Goyo| |Limelight| |Zenroom|
-" |Autocorrect|
-" |Workspace|
-" |Session|
-" |VimSnippets|
-" |Gutentags|
-" |Python_syntax|
-" |Polyglot|
-" |A_Alternate|
-" |Nerdtree|
-" |Gitgutter|
-" |Syntastic|
-" |Ack|
-" |Ale|
-" |VimLaTeX|
-" |Plasticboy-vim-markdown|
-" |Lexical| |Thesaurus-Query|
-" |YCM|
-" |GHDashboard|
-" |Pandoc|
-" |Litecorrect|
-" |Ctrlsf|
-" |FZF|
-" |latex-unicoder.vim|
-" |Peekaboo|
-" |EasyMotion|
-" |YankRing|
-" |Lion|
-" |textobj-clang|
-" |CtrlSF|
-" |Startify|
-" |AutoPairs|
-" |Utl|
 
-
+" *Lexical* *Thesaurus-Query*
 " *Goyo* *Limelight* *Zenroom*
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-let g:limelight_default_coefficient = 0.7
-let g:limelight_conceal_ctermfg = 238
+source $XDG_CONFIG_HOME/vim/conf.d/prose.vim
 
 " *Autocorrect*
 autocmd FileType markdown,mkd call AutoCorrect()
 autocmd FileType tex call AutoCorrect()
 autocmd FileType text call AutoCorrect()
+
+" Emojis:
+au FileType html,php,markdown,mmd,text,mail,gitcommit,vim,vimwiki
+    \ runtime macros/emoji-ab.vim
 
 
 " *Workspace*
