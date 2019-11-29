@@ -19,6 +19,7 @@ call extend(g:ycm_semantic_triggers, {
 
 " pandoc citekeys
 let g:ycm_semantic_triggers.pandoc = ['@']
+let g:ycm_semantic_triggers.markdown = ['@']
 
 " Modified from :put =string(g:vimetex#re#youcompleteme``)
 let g:ycm_semantic_triggers.tex = [

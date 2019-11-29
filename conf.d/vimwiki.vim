@@ -1,3 +1,4 @@
+au FileType vimwiki call pandoc#completion#Init()
 let g:vimwiki_table_mappings = 0
 let g:vimwiki_list = [
             \{'path': '~/Documents/VimWiki/',
