@@ -140,6 +140,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/switch.vim
 " *vimwiki*
 source $XDG_CONFIG_HOME/vim/conf.d/vimwiki.vim
 
+" *taskwiki*
+source $XDG_CONFIG_HOME/vim/conf.d/taskwiki.vim
+
 " *Speeddating*
 let g:speeddating_no_mappings=1
 
