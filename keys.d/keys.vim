@@ -103,20 +103,20 @@ nnoremap d# ?\<<C-r>=expand('<cword>')<CR>\>\C<CR>``dgN
 
 
 " filepath as if a register, use \"%p for just the filename"{{{5
-nmap "%p :put =expand('%:p:t')<CR>
+" nmap "%p :put =expand('%:p:t')<CR>
+" nmap "<C-g>p :put =expand('%:p')<CR>
+" nmap "<C-g>P :put =expand('%:p')<CR>
+" vmap "<C-g>p :put =expand('%:p')<CR>
+" imap <C-R><C-g> <Esc>"<C-g>p"i
 " nmap "%P :put =expand('%:p:t')<CR>
-nmap "<C-g>p :put =expand('%:p')<CR>
-nmap "<C-g>P :put =expand('%:p')<CR>
 " omap <C-g> h:put =expand('%:p')<CR>
-vmap "<C-g>p :put =expand('%:p')<CR>
-imap <C-R><C-g> <Esc>"<C-g>p"i
 
 " Edit/create file under cursor {{{5
 nmap <leader>gf :e <cfile><cr>
 xmap <leader>gf <Esc>:e <C-R>*<cr>
 " Edit in the preview window file under cursor {{{5
-nmap gfp :exec 'pedit ' . expand('<cfile>')<CR>
-xmap gfp :exec 'pedit ' . expand('<cfile>')<CR>
+nmap gfp :cd %:p:h <Bar> exec 'pedit ' . expand('<cfile>') <Bar> cd - <CR>
+xmap gfp <Esc>:cd %:p:h <Bar> :exec 'pedit ' .  expand(@*) <Bar> :cd - <CR>
 
 " Open a Quickfix window for the last search.                   {{{5
 " TODO incorporate FZF?
