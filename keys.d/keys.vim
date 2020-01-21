@@ -445,6 +445,8 @@ noremap <Left> :cprev<CR>
 
 " Function Keys {{{4
 " SynStack: TODO rempap to something more useful, maybe put in vim debug augroup
+nnoremap <F1> K
+vnoremap <F1> K
 nmap <F2> :call customFuncs#SynStack2()<CR>
 " nmap <F2> :call customFuncs#SynStack()<CR>
 
