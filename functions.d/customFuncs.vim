@@ -51,7 +51,7 @@ function! customFuncs#Underline(chars)
   let uline = repeat(chars, (nr_columns / len(chars)) + 1)
   put =strpart(uline, 0, nr_columns)
 endfunction
-command! -nargs=? Underline call s:Underline(<q-args>)
+command! -nargs=? Underline call customFuncs:Underline(<q-args>)
 
 function! customFuncs#ExecuteMacroOverVisualRange()
     " Run the recording only over matched visual range
@@ -60,8 +60,8 @@ echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-
 function! s:Scratch (command, ...)
+" Put the outputs of a vim command in a new buffer
     redir => lines
     let saveMore = &more
     set nomore
@@ -96,3 +96,4 @@ command! Wd write|bdelete
 
 command! -nargs=? Scriptnames call <sid>Scratch('scriptnames', <f-args>)
 command! -nargs=+ Scratch call <sid>Scratch(<f-args>)
+

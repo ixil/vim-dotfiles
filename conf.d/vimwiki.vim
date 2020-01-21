@@ -3,7 +3,7 @@ let g:vimwiki_table_mappings = 0
 let g:vimwiki_list = [
             \{'path': '~/Documents/VimWiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-
+let g:vimwiki_folding='syntax'
 " au BufRead,BufNewFile *.wiki set filetype=vimwiki
 " :autocmd FileType vimwiki map d :VimwikiMakeDiaryNote
 function! ToggleCalendar()

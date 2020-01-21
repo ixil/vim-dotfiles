@@ -1,4 +1,4 @@
-set guifont=iosevka\ 12
+set guifont=iosevka\ 9
 "  if has('gui_running')
    " Font
    " set guifont=iosevka\ 12

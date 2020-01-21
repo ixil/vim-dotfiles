@@ -13,14 +13,14 @@ let g:pandoc#command#prefer_pdf = 1
 " let g:pandoc#compiler#arguments = "---quiet ---strict"
 
 let g:pandoc#after#modules#enabled = ["nrrwrgn", "ultisnips"]
-" let g:pandoc#biblio#use_bibtool=[]
+let g:pandoc#biblio#use_bibtool=1
 let g:pandoc#biblio#sources="bclg"
 let g:pandoc#completion#bib#mode='citeproc'
+let g:pandoc#biblio#bibs=["~/Documents/Papers/wheeled_anymal.bib"]
 let g:pandoc#folding#fold_yaml=1
 " Also see konfekt/fastfold
 let g:pandoc#folding#fastfolds=1
-let g:pandoc#folding#level=0
-let g:pandoc#biblio#sources=["~/Documents/Papers/wheeled_anymal.bib"]
+let g:pandoc#folding#level=3
 
 
 " let g:pandoc#command#templates_file= split(&runtimepath, ",")[0]."/vim-pandoc-templates"
