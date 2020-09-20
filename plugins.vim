@@ -70,8 +70,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'vim-scripts/visualrepeat'
 
      " Commenting and text manip
-     " Plug 'tpope/vim-surround'              " Surround visual/objects with whatever
-     Plug 'wilywampa/vim-surround'              " Surround visual/objects with whatever
+     Plug 'tpope/vim-surround'              " Surround visual/objects with whatever
      Plug 'tomtom/tcomment_vim'             " Commenting
      " Plug 'tpope/vim-commentary'          " Un/Comment stuff: gcc, gc<motion>,
      Plug 'tommcdo/vim-exchange'            " cx<movement> to exchange
