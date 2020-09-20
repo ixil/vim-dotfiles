@@ -33,6 +33,10 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " for turning multiline code <-> into single line: gS, gJ
      Plug 'AndrewRadev/splitjoin.vim'
+     " TODO
+     Plug 'FooSoft/vim-argwrap'
+
+     " TODO
      Plug 'markonm/traces.vim'
 
      " Autocomplete search terms with <C-Tab>
