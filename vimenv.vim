@@ -25,4 +25,5 @@
 "
 " Move the netrwhist to a cache loc
 let g:netrw_home=$XDG_CACHE_HOME.'/vim/netrw'
-set pyxversion=3
+" set pyxversion 3
+
