@@ -5,8 +5,12 @@ let g:clang_extent_selector_use_default_mapping = 0
 "     autocmd FileType c,cpp map <buffer><Leader><Leader> <Plug>(clang-select-next-extent)
 " augroup END
 
+autocmd FileType c ClangFormatAutoEnable
 
-" let g:textobj_clang_mapping_kind = ['any', 'class', 'function', 'expression', 'statement', 'parameter', 'namespace', 'under_cursor', 'most_inner']s
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_formatexpr = 1
+
+let g:textobj_clang_mapping_kind = ['any', 'class', 'function', 'expression', 'statement', 'parameter', 'namespace', 'under_cursor', 'most_inner']
 let g:textobj_clang_more_mappings = 1
 " i;m 	select the most inner definition
 " i;c 	select class blocks

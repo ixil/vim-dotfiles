@@ -143,8 +143,9 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'tpope/vim-sleuth'
      Plug 'jamessan/vim-gnupg'
 
-     " Build, makeprg, compiler
+     " Build, makeprg, compiler definitions
      Plug 'tpope/vim-dispatch'
+     " Plug 'vim-scripts/clang'
 
  """ Text Objects:
  " https://github.com/kana/vim-textobj-user/wiki
@@ -336,11 +337,11 @@ call plug#begin('~/.local/share/vim/plugged')
 
  """ Filetypes:
      "" C/C++ clang
+     Plug 'octol/vim-cpp-enhanced-highlight'
      " Plug 'bfrg/vim-cpp-modern' "TODO Polyglot, this supports /20
      Plug 'libclang-vim/vim-textobj-clang'
      Plug 'libclang-vim/vim-textobj-function-clang'
-    " Plug 'vim-scripts/clang'
-    Plug 'lyuts/vim-rtags'
+    " Plug 'lyuts/vim-rtags'
      " Plug 'vhdirk/vim-cmake'
      Plug 'farafonov-alexey/vim-cmake'
 

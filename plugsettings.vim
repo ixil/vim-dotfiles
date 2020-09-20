@@ -44,6 +44,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/ros.vim
 " *Rust-lang*
 source $XDG_CONFIG_HOME/vim/conf.d/rust-lang.vim
 
+
+" *lsp-cxx-highlight*
+source $XDG_CONFIG_HOME/vim/conf.d/lsp-cxx-highlight.vim
 " *Polyglot* settings must be set first
 source $XDG_CONFIG_HOME/vim/conf.d/polyglot-langs.vim
 

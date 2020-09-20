@@ -24,13 +24,13 @@ let g:cpp_experimental_simple_template_highlight = 1
 
 " Highlighting of library concepts is enabled by
 
-" let g:cpp_concepts_highlight = 1
+let g:cpp_concepts_highlight = 1
 
 " This will highlight the keywords concept and requires as well as all named requirements (like DefaultConstructible) in the standard library.
 
 " Highlighting of user defined functions can be disabled by
 
-" let g:cpp_no_function_highlight = 1
+let g:cpp_no_function_highlight = 1
 
 " Issues
 
