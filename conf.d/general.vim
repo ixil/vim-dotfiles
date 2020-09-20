@@ -13,7 +13,8 @@ set lazyredraw
 set encoding=utf8
 set termencoding=utf8
 
-set grepprg=rg\ --vimgrep
+set grepprg=rg\ --vimgrep\ -S\ -L
+set grepformat^=%f:%l:%c:%m
 
 " Leader
 let mapleader =" "

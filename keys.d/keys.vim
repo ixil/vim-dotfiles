@@ -188,9 +188,9 @@ map <leader>p :FZFMru<CR>
 "}}}3
 
 
-" FZF Ag  {{{3
+" FZF Rg  {{{3
 "TODO
-"Search with Ag                                                     {{{4
+"Search with Rg                                                     {{{4
 "   nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
 "}}}
 " Search FZF SearchWithAgInDirectory  <leader>. bind and Command  {{{4
@@ -225,7 +225,7 @@ map <leader>p :FZFMru<CR>
 "}}}4
 " Ag for the last search. {{{4
 " TODO what is this mapping?!
-nnoremap <silent> <leader>qa/ :execute "Ag! '" . substitute(substitute(substitute(@/, "\\\\<", "\\\\b", ""), "\\\\>", "\\\\b", ""), "\\\\v", "", "") . "'"<CR>
+nnoremap <silent> <leader>qa/ :execute "Rg! '" . substitute(substitute(substitute(@/, "\\\\<", "\\\\b", ""), "\\\\>", "\\\\b", ""), "\\\\v", "", "") . "'"<CR>
 " }}}4
 "}}}3
 "}}}2
