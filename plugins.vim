@@ -300,6 +300,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'lfilho/cosco.vim'
 
  " Alignment And Tables:
+     Plug 'chrisbra/csv.vim'
      Plug 'salsifis/vim-transpose'  " Column based text manipulation, CSV transposing
      " Plug 'junegunn/vim-easy-align' " For aligning stuff properly!
      Plug 'tommcdo/vim-lion' "TODO
