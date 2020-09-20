@@ -81,6 +81,10 @@ call plug#begin('~/.local/share/vim/plugged')
      " Use <C-n,p,x> <A-n>
      Plug 'mg979/vim-visual-multi'
 
+     " Replace with Register "gr{motion}
+     Plug 'vim-scripts/ReplaceWithRegister'
+
+
  "Sessions:
      " Session management
      " Plug 'thaerkh/vim-workspace'
