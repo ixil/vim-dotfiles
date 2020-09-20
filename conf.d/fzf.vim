@@ -22,7 +22,8 @@ let g:fzf_action = {
 
 " Default fzf layout
 " - down / up / left / right
-let g:fzf_layout = { 'down': '~40%' }
+" let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'tmux': '-p90%,60%' }
 
 " You can set up fzf window using a Vim command (Neovim or latest Vim 8 required)
 " let g:fzf_layout = { 'window': 'enew' }

@@ -293,7 +293,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " FZF
      " TODO arch installed on the rtp, otherwise use nix
-     Plug '~/.nix-profile/share/vim-plugins/fzf-0.18.0',  { 'as': 'local/fzf.vim' }  "basic usage, in
+     Plug 'junegunn/fzf'
+     " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+     Plug '~/.nix-profile/share/vim-plugins/fzf/plugin/fzf.vim',  { 'as': 'local/fzf.vim' }  "basic usage, in
      " Plug '/usr/share/vim/vimfiles/plugin/fzf',  { 'as': 'local/fzf.vim' }  "basic usage, in
      " Plug 'rayjzeng/fzf.vim'
      Plug 'junegunn/fzf.vim' " requires junegunn/fzf::plugins/fzf.vim

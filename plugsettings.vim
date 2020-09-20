@@ -98,7 +98,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/litecorrect.vim
 source $XDG_CONFIG_HOME/vim/conf.d/enhanceddiff.vim
 
 " *FZF*
-" source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
+source $XDG_CONFIG_HOME/vim/conf.d/fzf.vim
 
 " *latex-unicoder.vim*
 source $XDG_CONFIG_HOME/vim/conf.d/latex_unicoder.vim

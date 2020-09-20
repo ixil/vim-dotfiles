@@ -160,8 +160,10 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 " TODO dictionary is not set, but spell can be, but fzf doesn't pick it up
 " imap <c-x><c-k> <plug>(fzf-complete-word) 
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 imap <c-x><c-j> <plug>(fzf-complete-path)
-imap <c-x><c-f> <plug>(fzf-complete-file-ag)
+imap <c-x><c-f> <plug>(fzf-complete-file)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 " inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'right': '15%'})
 
