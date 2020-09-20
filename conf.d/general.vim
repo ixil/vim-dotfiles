@@ -39,6 +39,7 @@ set history=10000
 set number              " Show line numbers
 set linebreak           " Break lines at word (requires Wrap lines)
 set textwidth=100       " Line wrap (number of cols)
+set nowrap              " don't wrap lines
 set showmatch           " Highlight matching brace
 set visualbell          " Use visual bell (no beeping)
 
@@ -61,6 +62,7 @@ set virtualedit=block   " USE WITH CARE
 set ruler               " Show row and column ruler information
 set list
 set pastetoggle=<C-F2>  " Toggle paste mode, useful for terminal vim
+set concealcursor=c
 
 "" Advanced:
 set undofile

@@ -14,6 +14,7 @@ source $XDG_CONFIG_HOME/vim/functions.d/plug-buildfuncs.vim
 " Preload Settings:
 source $XDG_CONFIG_HOME/vim/conf.d/polyglot.vim
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
+" let g:vimtex_include_indicators=['input', 'include', 'import', 'subimport', 'import*', 'subimport*']
 " Assumes system installation of ycm TODO
 " let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
@@ -332,7 +333,7 @@ call plug#begin('~/.local/share/vim/plugged')
  """ Prose:
      " TODO augroups
      Plug 'reedes/vim-lexical'
-     " Plug 'reedes/vim-wordy'                 " TODO Probably don't need
+     Plug 'reedes/vim-wordy'                 " TODO Probably don't need
      Plug 'Ron89/thesaurus_query.vim'        " <Leader>cs default mapping
      Plug 'dbmrq/vim-ditto'                  " TODO
      " Autocorrection
@@ -377,7 +378,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
      "" TeX:
          Plug 'lervag/vimtex'
-         Plug 'KeitaNakamura/tex-conceal.vim'
+         Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
      "" Julia:
          " Plug 'JuliaEditorSupport/julia-vim' "Polyglot
