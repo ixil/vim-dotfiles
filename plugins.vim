@@ -242,9 +242,10 @@ call plug#begin('~/.local/share/vim/plugged')
          " Plug 'prabirshrestha/asyncomplete-lsp.vim
 
      " Plug 'lifepillar/vim-mucomplete' 
-     Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] }
+     Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
      " TODO ARCH only
      " Plug '/usr/share/vim/vimfiles/plugin/youcompleteme.vim', { 'as':'YouCompleteMe', 'on': [] }
+     " Plug '/usr/share/vim-youcompleteme/plugin/youcompleteme.vim', { 'as':'YouCompleteMe'}
      " TODO
      Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
      " Plug 'Cocophotos/vim-ycm-latex-semantic-completer'
@@ -454,11 +455,4 @@ call plug#begin('~/.local/share/vim/plugged')
 call plug#end()
 
 " Autoload Plugins:
-
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
-                     \| autocmd! load_us_ycm
-augroup END
-
 
