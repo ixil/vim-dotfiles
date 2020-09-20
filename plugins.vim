@@ -437,8 +437,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'chrisbra/NrrwRgn'           "focus on a narrow region
      Plug 'junegunn/goyo.vim'          " Writing Focus thingo
          Plug 'amix/vim-zenroom2'      " + additional stuff for goyo for md/rst/txt files (may conflict)
-         " Plug 'junegunn/limelight.vim' " Goes with Goyo
-         Plug 'ekaj2/limelight.vim' " Goes with Goyo
+         Plug 'junegunn/limelight.vim' " Goes with Goyo
+         " Plug 'ekaj2/limelight.vim' " Goes with Goyo
 
  "" Aesthetics And Appearance:
      " Plug 'Shougo/denite'
