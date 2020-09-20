@@ -83,6 +83,15 @@ function! s:Scratch (command, ...)
     0
 endfunction
 
+" set header title for journal & enter writing mode
+function! JournalMode()
+    execute 'normal gg'
+    let filename = '#' . ' ' . expand('%:r')
+    call setline(1, filename)
+    execute 'normal o'
+    execute 'Goyo'
+endfunction
+
 " Commands:
 " Fugitive: Git Review
 command Greview :Git! diff --staged
