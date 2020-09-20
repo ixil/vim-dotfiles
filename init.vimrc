@@ -50,3 +50,10 @@ nmap <leader>zshrc :tabe $ZDOTDIR<cr>
 "  augroup END
 "endif " has autocmd
 
+augroup journal
+    autocmd!
+
+    autocmd VimEnter */journal/**   0r /home/ixil/Templates/skeletons/journal.skeleton
+    autocmd VimEnter */journal/**       " set header for the particular journal
+    autocmd VimEnter */journal/**   :call JournalMode()setlocal complete=k/home/ixil/Documents/journal/**/*
+augroup end
