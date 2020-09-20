@@ -175,7 +175,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'kana/vim-textobj-function' "f,F
      Plug 'idbrii/textobj-word-column.vim' "c,C
      Plug 'Julian/vim-textobj-brace' "j
-
+     Plug 'lucapette/vim-textobj-underscore' "_
      Plug 'libclang-vim/vim-textobj-clang' ";, ;{m,c,f,e,s,p,n,u,a}
      " TODO
      Plug 'rbonvall/vim-textobj-latex' "\, $ math 
