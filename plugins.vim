@@ -54,6 +54,11 @@ call plug#begin('~/.local/share/vim/plugged')
      " Encoding/decode ][ x xml, u url, y - C string encode
      Plug 'tpope/vim-unimpaired'
 
+     " Quick List helpful
+     Plug 'romainl/vim-qlist'
+     " TODO may clash with ALE, syntastic etc
+     Plug 'romainl/vim-qf'
+
      " Repeat
      Plug 'tpope/vim-repeat'
      Plug 'inkarkat/vim-ingo-library'
