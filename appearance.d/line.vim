@@ -20,7 +20,7 @@ set statusline+=%*
 "Airline:
 "Airline settings
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
+" let g:airline_theme='badwolf'
 let g:airline_theme='tomorrow'
 
 " TODO wrap in the 'if tmux'
