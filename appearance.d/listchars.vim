@@ -11,21 +11,27 @@ if has('gui_running')
 else
   " Terminal Listchars:
 
-  " set listchars+=trail:◥
-  "                trail:·
+  " TODO put in the left pointing arrow
+  " set listchars=tab:▸▸-
   set listchars=tab:▸\ 
   "             tab:»·
   set listchars+=eol:¬
   "              eol:★
   "              eol:¶
-  set listchars+=extends:→,precedes:←
-  "              extends:❯,precedes:❮
+  " set listchars+=extends:→,precedes:←
+  set listchars+=extends:❯,precedes:❮
   "              extends:»,precedes:«
-  set listchars+=nbsp:◥
+  set listchars+=nbsp:␣
+  "              nbsp:◥
   "              nbsp:_
   "              nbsp:+
-  set showbreak=★★★
-  "            =↪\  
+  " set listchars+=trail:◥
+  set listchars+=trail:¬
+  "                trail:·
+  "                trail:•
+  "                trail:¬
+  " set showbreak=★★★
+  " set listchars+=conceal:c
+  set showbreak==↪\ ↪\ 
   "            =+++     " Wrap-broken line prefix
-
 endif

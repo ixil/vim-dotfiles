@@ -36,6 +36,9 @@ endif
 " General:
                                                                                               " {{{1
 
+" Behaviour
+set sidescrolloff=1 "Keep extend charactor on screen / autoscroll when 1 away from window border
+" set sidescroll=1
 
 " Visuals:                                                                                    " {{{2
 source $XDG_CONFIG_HOME/vim/appearance.d/fonts.vim
