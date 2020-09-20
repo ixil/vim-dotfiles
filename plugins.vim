@@ -281,6 +281,8 @@ call plug#begin('~/.local/share/vim/plugged')
      " Increment Dates with CTRL-A/X
      Plug 'tpope/vim-speeddating'
      Plug 'AndrewRadev/switch.vim'
+     " Color ansi escape codes
+     Plug 'powerman/AnsiEsc.vim'
 
 
      Plug 'bronson/vim-trailing-whitespace' " Remove trailing whitespace
@@ -320,6 +322,8 @@ call plug#begin('~/.local/share/vim/plugged')
 
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
+
+
 
 
  " Tmux:
@@ -373,8 +377,8 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'vhdirk/vim-cmake'
      Plug 'farafonov-alexey/vim-cmake'
 
+
      "" Tag Languages: (HTML/CSS)
-     Plug 'powerman/AnsiEsc.vim'  " Color ansi escape codes
          Plug 'Valloric/MatchTagAlways'
          Plug 'mattn/emmet-vim' " TODO
          "Plug 'alvan/vim-closetag'
@@ -399,7 +403,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'letientai299/vim-react-snippets' ", { 'branch': 'es6' }
          " Plug 'pangloss/vim-javascript' "Polyglot
 
-     "" Rust
+     "" Rust:
          " Plug 'rust-lang/rust.vim', {' for': 'rust'} "Polyglot
          Plug 'racer-rust/vim-racer', {' for': 'rust'}
 
