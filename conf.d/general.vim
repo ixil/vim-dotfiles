@@ -3,7 +3,9 @@
 
 " Improves redrawing
 set ttyfast
-set shell=/bin/dash
+" set shell=/bin/dash
+set shell=/bin/zsh
+set shellpipe=>
 " Don't update screen while executing a macro, register or other commands that not have been typed
 set lazyredraw
 

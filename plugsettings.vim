@@ -26,6 +26,10 @@ source $XDG_CONFIG_HOME/vim/conf.d/session.vim
 " *VimSnippets*
 source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
 
+
+" *dispatch*
+source $XDG_CONFIG_HOME/vim/conf.d/dispatch.vim
+
 " *Ultisnips*
 source $XDG_CONFIG_HOME/vim/conf.d/ultisnips.vim
 
