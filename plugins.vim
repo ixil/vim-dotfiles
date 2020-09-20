@@ -101,6 +101,7 @@ call plug#begin('~/.local/share/vim/plugged')
  "Search:
      Plug 'mileszs/ack.vim' " :Ack, LAck, LAckAdd, AckAdd
      " Plug 'albfan/ag.vim'
+     " Plug 'brooth/far.vim'
 
      " <C-f>{f,n,t} - follow with h,j,k,l, C-J, C-K, p,o
      Plug 'dyng/ctrlsf.vim'                     " TODO TODO
