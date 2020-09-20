@@ -254,6 +254,8 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'jeayae/color_coded', { 'do': 'rm -f CMakeCache.txt && cmake . && make && make install',\
      "    'for': ['cpp', 'objc', 'objcpp'], 'build_commands' : ['cmake', 'make']}
 
+     " CCLS
+     Plug 'm-pilia/vim-ccls'
      Plug 'jackguo380/vim-lsp-cxx-highlight'
  """ Scripts And Functions:
      " Universal Text Linking - opens URIs, ideas, wiki bookmarks, etc etc etc
