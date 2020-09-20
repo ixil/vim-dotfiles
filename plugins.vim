@@ -296,6 +296,8 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'raimondi/delimitmate' "Delimiters autocomplete. Many similar
      "TODO augroup
      Plug 'tpope/vim-endwise', { 'on': [], 'for': [], 'as': 'endwise' } " End/do/endif etc autocompletition, load manually at end
+     " TODO
+     Plug 'lfilho/cosco.vim'
 
  " Alignment And Tables:
      Plug 'salsifis/vim-transpose'  " Column based text manipulation, CSV transposing
