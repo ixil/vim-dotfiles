@@ -401,7 +401,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'plytophogy/vim-virtualenv'
          " Plug 'vim-python/python-syntax'  " Improved python syntax Polyglot
          " Plug 'Vimjas/vim-python-pep8-indent'  " Proper python indenting: Polyglot
-         if has('python') ||  has('python3') | Plug 'davidhalter/jedi-vim', {'as':'dothis'} | endif
+         if has('python') ||  has('python3') | Plug 'davidhalter/jedi-vim', {'as':'jedi-v'} | endif
      " Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
      "" TeX:
