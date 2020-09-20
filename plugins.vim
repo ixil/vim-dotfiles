@@ -147,7 +147,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'gilligan/vim-lldb'
 
  " Functionality:
-     Plug 'vimwiki/vimwiki'
+     " Plug 'vimwiki/vimwiki'
      Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " TODO
      Plug 'jceb/vim-orgmode'
      " TODO
