@@ -125,7 +125,12 @@ augroup END
 " Plugins:
 source $XDG_CONFIG_HOME/vim/plugsettings.vim
 source $XDG_CONFIG_HOME/vim/functions.d/plugfuncs.vim
-source $XDG_CONFIG_HOME/vim/functions.d/autocompleteFixes.vim
+source $XDG_CONFIG_HOME/vim/functions.d/paste_bins.vim
+source $XDG_CONFIG_HOME/vim/functions.d/customFuncs.vim
+" source $XDG_CONFIG_HOME/vim/functions.d/vim-tmux-zsh.vim
+
+" This should no longer be needed:
+" source $XDG_CONFIG_HOME/vim/functions.d/autocompleteFixes.vim
 
 " Keys:
 source $XDG_CONFIG_HOME/vim/keys.d/keys.vim
