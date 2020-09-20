@@ -237,6 +237,7 @@ call plug#begin('~/.local/share/vim/plugged')
      "Plug 'sickill/vim-pasta'
      " TODO
      " Remove YouCompleteMe go to ucomplete/language server based things
+     " Plug 'neovim/nvim-lsp'
      " Plug 'prabirshrestha/vim-lsp'
      " Plug 'prabirshrestha/asyncomplete.vim'
          " Plug 'prabirshrestha/asyncomplete-lsp.vim
@@ -252,6 +253,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'jeayae/color_coded', { 'do': 'rm -f CMakeCache.txt && cmake . && make && make install',\
      "    'for': ['cpp', 'objc', 'objcpp'], 'build_commands' : ['cmake', 'make']}
 
+     Plug 'jackguo380/vim-lsp-cxx-highlight'
  """ Scripts And Functions:
      " Universal Text Linking - opens URIs, ideas, wiki bookmarks, etc etc etc
      " TODO
