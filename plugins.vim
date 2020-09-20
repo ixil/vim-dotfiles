@@ -261,6 +261,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " CCLS
      Plug 'm-pilia/vim-ccls'
      Plug 'jackguo380/vim-lsp-cxx-highlight'
+
  """ Scripts And Functions:
      " Universal Text Linking - opens URIs, ideas, wiki bookmarks, etc etc etc
      " TODO
@@ -319,8 +320,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
  " Tmux:
      Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
-     Plug 'tmux-plugins/vim-tmux-focus-events'
+     " Plug 'tmux-plugins/vim-tmux-focus-events' "terminus
      Plug 'tmux-plugins/vim-tmux' " Filetype for .tmux.conf
+     " Plug 'tpope/vim-tbone'
      "Plug 'benmills/vimux'
 
      " Inline REPL:

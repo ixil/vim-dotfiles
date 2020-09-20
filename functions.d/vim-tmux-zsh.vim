@@ -1,4 +1,4 @@
-if $TMUX != '' 
+if $TMUX != ''
   " integrate movement between tmux/vim panes/windows
 
   fun! TmuxMove(direction)
@@ -65,7 +65,7 @@ if $TMUX != ''
 
   " Quickly restart your debugger/console/webserver. Eg: if you are developing a node.js web app
   " in the 'serve.js' file you can quickly restart the server with this mapping:
-  nnoremap <silent> <f5> :call SlimuxSendKeys('C-C " node serve.js" Enter')<cr>
+  " nnoremap <silent> <f5> :call SlimuxSendKeys('C-C " node serve.js" Enter')<cr>
   " pay attention to the space before 'node', this is actually required as send-keys will eat the first key
 
 endif
