@@ -9,6 +9,7 @@
        set directory=$XDG_CACHE_HOME/vim,~/.vim/tmp,/tmp
        set backupdir=$XDG_CACHE_HOME/vim,~/.vim/tmp,/tmp
        set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+       set undodir=$XDG_CACHE_HOME/vim/undo
        set nocompatible
 
 
