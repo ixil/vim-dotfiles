@@ -427,6 +427,8 @@ call plug#begin('~/.local/share/vim/plugged')
 
      "" Markdown:
         " Use pandoc instead
+        Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+        " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
          " Plug 'plasticboy/vim-markdown'
          " Plug 'mattly/vim-markdown-enhancements' " critic and multi markdown
      "Plug 'waylan/vim-markdown-extra-preview' " TODO
