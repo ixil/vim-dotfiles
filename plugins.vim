@@ -13,6 +13,7 @@ source $XDG_CONFIG_HOME/vim/functions.d/plug-buildfuncs.vim
 
 " Preload Settings:
 source $XDG_CONFIG_HOME/vim/conf.d/polyglot.vim
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 " Assumes system installation of ycm TODO
 " let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
@@ -20,7 +21,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/polyglot.vim
 call plug#begin('~/.local/share/vim/plugged')
 
 " Local Plugins:
-     " Plug '~/dev/vim/Ultisnips', { 'as': 'custom/Ultisnips' } " done with conf.d
+     Plug '~/Templates/snippets'
 
  """ General Editing:
      " Plug 'Konfekt/FastFold' " Faster/Better folding
@@ -220,7 +221,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  """ Completion And Snippets:
      " Plug 'ervandew/supertab'                                      " TODO
-     Plug 'sirver/ultisnips', { 'on': [] } " Note: YCM + ultisnips require settings to work together
+     Plug 'sirver/ultisnips'  " Note: YCM + ultisnips require settings to work together
      Plug 'honza/vim-snippets'
 
      " TODO
