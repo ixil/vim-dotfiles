@@ -77,6 +77,14 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'thaerkh/vim-workspace'
      " Plug 'tpope/vim-obsession'
 
+ """ Movement:
+     " Plug 'vim-seek/vim-sneak'
+     " <Leader><Leader><motion>
+     Plug 'easymotion/vim-easymotion'
+     Plug 'benjifisher/matchit.zip'
+     Plug 'unblevable/quick-scope'
+     " Plug 'rhysd/clever-f.vim'
+
  "Search:
      Plug 'mileszs/ack.vim' " :Ack, LAck, LAckAdd, AckAdd
      " Plug 'albfan/ag.vim'
@@ -87,11 +95,6 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'haya14busa/incsearch-easymotion.vim' " TODO z/, z?, zg/
          Plug 'haya14busa/incsearch-fuzzy.vim'      " TODO
 
- """ Movement:
-     " Plug 'vim-seek/vim-sneak'
-     " <Leader><Leader><motion>
-     Plug 'easymotion/vim-easymotion'
-     Plug 'benjifisher/matchit.zip'
 
  """ Files:
      "" Unix:
@@ -171,6 +174,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      " TODO
      Plug 'bps/vim-textobj-python' "f,c
+     " Plug 'wellle/targets.vim'
 
      Plug 'terryma/vim-expand-region' "J/K
      Plug 'https://gist.github.com/ixil/5356298948576735b3713b01d668a399',

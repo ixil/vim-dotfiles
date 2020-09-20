@@ -106,8 +106,8 @@ source $XDG_CONFIG_HOME/vim/conf.d/latex_unicoder.vim
 " *Peekaboo*
 let g:peekaboo_delay=250 " Delay the side window unless I'm really slow
 
-" *EasyMotion*
-source $XDG_CONFIG_HOME/vim/conf.d/easymotion.vim
+" *EasyMotion, quickscope etc*
+source $XDG_CONFIG_HOME/vim/conf.d/Motions.vim
 
 " *YankRing*
 " source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
