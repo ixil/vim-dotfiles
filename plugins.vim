@@ -450,9 +450,11 @@ call plug#begin('~/.local/share/vim/plugged')
  " Utilities:
      " TODO
      " Plug 'mvphilip/vim-submode'
+     Plug 'lervag/file-line'
      " Plug 'AndrewRadev/sideways.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
+
  " Window management
      Plug 'simeji/winresizer'
      " Plug 'dr-chip-vim-scripts/ZoomWin' "C-w o to zoom in/out
