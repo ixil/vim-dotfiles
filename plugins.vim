@@ -147,6 +147,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'gilligan/vim-lldb'
 
  " Functionality:
+     " Plug 's1341/vim-tabws' "TODO
      " Plug 'vimwiki/vimwiki'
      Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " TODO
      Plug 'jceb/vim-orgmode'
@@ -323,6 +324,9 @@ call plug#begin('~/.local/share/vim/plugged')
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
 
+     "Papis
+     " TODO
+     " Plug 'papis/papis-vim.git'
 
 
 
@@ -435,6 +439,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  " Utilities:
      " TODO
+     " Plug 'mvphilip/vim-submode'
      " Plug 'AndrewRadev/sideways.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
