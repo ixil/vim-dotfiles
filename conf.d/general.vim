@@ -68,7 +68,7 @@ set undolevels=1000            " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
 
 if has("persistent_undo")
-    set undodir='$XDG_CACHE_HOME/vim/undo'
+    set undodir=$XDG_CACHE_HOME/vim/undo
     set undofile
 endif
 
