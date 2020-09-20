@@ -416,7 +416,7 @@ call plug#begin('~/.local/share/vim/plugged')
          " Plug 'junegunn/limelight.vim' " Goes with Goyo
          Plug 'ekaj2/limelight.vim' " Goes with Goyo
 
- "" Aesthetics:
+ "" Aesthetics And Appearance:
      " Plug 'Shougo/denite'
      " Plug 'edkolev/tmuxline.vim'
      Plug 'Yggdroot/indentLine'
@@ -431,6 +431,10 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'sloria/vim-hybrid'  " hybrid with easier-to-read line numbers
      "Plug 'noah/vim256-color' "Uses submodules so who knows...
      Plug 'connorholyday/vim-snazzy'
+     Plug 'arcticicestudio/nord-vim'
+     Plug 'ayu-theme/ayu-vim'
+     Plug 'chriskempson/base16-vim'
+     Plug 'jandamm/vim-one' " Actually called 'one'
 
 """ To Be Loaded Last:
 " endwise

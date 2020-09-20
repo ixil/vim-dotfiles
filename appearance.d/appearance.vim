@@ -46,14 +46,23 @@ source $XDG_CONFIG_HOME/vim/appearance.d/listchars.vim
 
 " Colorscheme:
 set background=dark
-colorscheme PaperColor
+let g:nord_uniform_diff_background = 1
+let g:nord_cursor_line_number_background = 1
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_bold = 1
+let base16colorspace=256
+let g:one_allow_italics = 1
+
+" colorscheme 'hybrid-sl'
+colorscheme nord
 " let g:nd_themes = [
-"   \ ['6:00',  'PaperColor', 'light'],
-"   \ ['17:00', 'hybrid-sl', 'dark'],
+"   \ ['6:00',  'snazzy', 'light'],
+"   \ ['17:00', 'snazzy', 'dark'],
 "   \ ]
 let g:nd_themes = [
-  \ ['6:00',  'PaperColor', 'light'],
-  \ ['17:00', 'PaperColor', 'dark'],
+  \ ['6:00',  'one', 'light'],
+  \ ['17:00', 'nord', 'dark'],
   \ ]
 
 "vertical splits less gap between bars in the status bars
