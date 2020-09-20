@@ -2,7 +2,7 @@
 "             \ pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_completion=0
-let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_collect_identifiers_from_tags_files = 0
 " let let g:ycm_language_server = []
 
 let g:ycm_filetype_blacklist={
@@ -70,6 +70,6 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 
 "let clangd fully control code completion
-let g:ycm_clangd_uses_ycmd_cache = 0
+" let g:ycm_clangd_uses_ycmd_cache = 0
 " use installed clangd, not YCM bundled clangd which doesn't get updates
 " let g:ycmclangd_binary_path = exepath("clangd")
