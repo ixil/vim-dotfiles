@@ -80,7 +80,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " Multiple Cursors
      " Use <C-n,p,x> <A-n>
-     Plug 'terryma/vim-multiple-cursors'
+     Plug 'mg979/vim-visual-multi'
 
  "Sessions:
      " Session management
