@@ -396,8 +396,9 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'Shougo/vinarise.vim'
 
      """ ROS
-         " Plug 'taketwo/vim-ros'
-         Plug 'galou/vim-ros'
+         Plug 'taketwo/vim-ros'
+         Plug 'kgreenek/vim-ros-ycm'
+         " Plug 'galou/vim-ros', { 'branch': 'python3' }
 
  " Utilities:
      " TODO
