@@ -62,6 +62,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/nerdtree.vim
 
 " *Gitgutter*
 " source $XDG_CONFIG_HOME/vim/conf.d/gitgutter.vim
+let g:gitgutter_grep = 'rg'
 
 " *Signify*
 source $XDG_CONFIG_HOME/vim/conf.d/signify.vim
