@@ -25,5 +25,6 @@
 "
 " Move the netrwhist to a cache loc
 let g:netrw_home=$XDG_CACHE_HOME.'/vim/netrw'
-" set pyxversion 3
 
+" Set Python 3 as the only version, without needing to recompile
+let &pythondll=&pythonthreedll
