@@ -1,5 +1,7 @@
 """ Source the stuff
 
+if empty($MYVIMRC) | let $MYVIMRC = expand('<sfile>:p') | endif
+
 " Environment setup:
 source $XDG_CONFIG_HOME/vim/vimenv.vim
 
@@ -39,8 +41,8 @@ if has ('autocmd') " Remain compatible with earlier versions
 endif " has autocmd
 
 map <leader>vimrc :tabe $MYVIMRC<cr>
-map <leader>tmux :tabe ~/.tmux.conf<cr>
-map <leader>vimso :so $MYVIMRC<cr>
+" map <leader>tmux :tabe ~/.tmux.conf<cr>
+" map <leader>vimso :so $MYVIMRC<cr>
 nmap <leader>zshrc :tabe $ZDOTDIR<cr>
 
 "if has ('autocmd') " Remain compatible with earlier versions
