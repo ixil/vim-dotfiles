@@ -163,6 +163,27 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'tpope/vim-dispatch'
      " Plug 'vim-scripts/clang'
 
+     " Debugging:
+     " if has('nvim')
+     "     Plug 'mfussenegger/nvim-dap'
+     "     Plug 'mfussenegger/nvim-dap-python'
+     " endif
+
+     " Plug 'vim-vdebug/vdebug'
+     " Plug 'gilligan/vim-lldb'
+
+     "Telescope:
+     " if has('nvim')
+     "     Plug 'nvim-lua/popup.nvim'
+     "     Plug 'nvim-lua/plenary.nvim'
+     "     Plug 'nvim-telescope/telescope.nvim' "TODO
+     "     Plug 'bi0ha2ard/telescope-ros.nvim'
+     "     Plug 'fhill2/telescope-ultisnips.nvim'
+     "     Plug 'gbrlsnchs/telescope-lsp-handlers.nvim'
+     "     Plug 'nvim-telescope/telescope-dap.nvim'
+     " endif
+
+
  """ Text Objects:
  " https://github.com/kana/vim-textobj-user/wiki
  Plug 'kana/vim-textobj-user' |
@@ -251,6 +272,15 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'majutsushi/tagbar'
 
  """ Completion And Snippets:
+    if has('nvim')
+        Plug 'neovim/nvim-lsp'
+        Plug 'nvim-treesitter/nvim-treesitter'
+        Plug 'nvim-lua/completion-nvim'
+            Plug 'steelsojka/completion-buffers'
+            Plug 'kristijanhusak/vim-dadbod-completion' " Database completion
+            Plug 'nvim-treesitter/completion-treesitter'
+    endif
+
      " Plug 'ervandew/supertab'                                      " TODO
      Plug 'sirver/ultisnips'  " Note: YCM + ultisnips require settings to work together
      Plug 'honza/vim-snippets'

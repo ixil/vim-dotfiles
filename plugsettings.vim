@@ -191,3 +191,11 @@ source $XDG_CONFIG_HOME/vim/conf.d/night-and-day.vim
 
 let g:kitty_navigator_listening_on_address = $XDG_RUNTIME_DIR . '/kitty'
 let g:oscyank_term = 'kitty'
+
+" *Telescope*
+if has('nvim')
+    source $XDG_CONFIG_HOME/vim/conf.d/completion.vim
+    " source $XDG_CONFIG_HOME/vim/conf.d/debug-adaptor-protocol.vim
+    " source $XDG_CONFIG_HOME/vim/conf.d/telescope.vim
+endif
+
