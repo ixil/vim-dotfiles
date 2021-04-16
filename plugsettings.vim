@@ -27,6 +27,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/session.vim
 source $XDG_CONFIG_HOME/vim/conf.d/vimsnippets.vim
 
 
+" *cheat.sh
+source $XDG_CONFIG_HOME/vim/conf.d/cheat-sh.vim
+
 " *dispatch*
 source $XDG_CONFIG_HOME/vim/conf.d/dispatch.vim
 

@@ -308,6 +308,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'godlygeek/tabular'
 
  " Binaries Interfaces And Helpers:
+
+     Plug 'dbeniamine/cheat.sh-vim'
      Plug 'wincent/terminus'
      Plug 'junegunn/vim-peekaboo'  " Register display tray
 
