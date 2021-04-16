@@ -309,6 +309,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'godlygeek/tabular'
 
  " Binaries Interfaces And Helpers:
+     Plug 'ojroques/vim-oscyank'
+
 
      Plug 'dbeniamine/cheat.sh-vim'
      Plug 'wincent/terminus'
@@ -341,13 +343,14 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'papis/papis-vim.git'
 
 
-
- " Tmux:
-     Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
-     " Plug 'tmux-plugins/vim-tmux-focus-events' "terminus
-     Plug 'tmux-plugins/vim-tmux' " Filetype for .tmux.conf
-     " Plug 'tpope/vim-tbone'
-     "Plug 'benmills/vimux'
+    " Kitty:
+        Plug 'knubie/vim-kitty-navigator'
+    " Tmux:
+         Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
+         " Plug 'tmux-plugins/vim-tmux-focus-events' "terminus
+         Plug 'tmux-plugins/vim-tmux' " Filetype for .tmux.conf
+         " Plug 'tpope/vim-tbone'
+         "Plug 'benmills/vimux'
 
      " TODO make the mappings between repl things the same
      " Inline REPL:
