@@ -331,6 +331,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
          Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
 
+     " Plug 'stevearc/vim-arduino'
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
 

@@ -157,6 +157,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/vimwiki.vim
 " *taskwiki*
 source $XDG_CONFIG_HOME/vim/conf.d/taskwiki.vim
 
+" *vim-arduino
+source $XDG_CONFIG_HOME/vim/conf.d/vim-arduino.vim
+
 " *Speeddating*
 let g:speeddating_no_mappings=1
 
