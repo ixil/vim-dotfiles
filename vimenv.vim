@@ -21,7 +21,22 @@ set viewdir=$XDG_CACHE_HOME/vim/view     | call mkdir(&viewdir,   'p', 0700)
 
 if !has('nvim') " Neovim has its own special location
   set viminfofile=$XDG_CACHE_HOME/vim/viminfo
+  let &pythondll=&pythonthreedll
+else
+  " cd ~/.config/nvim && pipenv --py
+
+  " let g:python_host_prog = '/full/path/to/neovim2/bin/python'
+  " let g:python3_host_prog = '/home/ixil/.local/share/virtualenvs/nvim-bV7aKuTs/bin/python'
+ if exists('g:started_by_firenvim')
+ endif
 endif
 
+" Always use the same venv for vim regardless of shell env
+" let g:vim_virtualenv_path = '/path/to/my/new/vim_virtualenv'
+" if exists('g:vim_virtualenv_path')
+"   pythonx import os; import vim
+"   pythonx activate_this = os.path.join(vim.eval('g:vim_virtualenv_path'), 'bin/activate_this.py')
+"   pythonx with open(activate_this) as f: exec(f.read(), {'__file__': activate_this})
+" endif
+
 " Set Python 3 as the only version, without needing to recompile
-let &pythondll=&pythonthreedll
