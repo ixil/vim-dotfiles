@@ -210,10 +210,10 @@ call plug#begin('~/.local/share/vim/plugged')
      "TODO github api in .netrc
      Plug 'tpope/vim-rhubarb'
      "TODO github api in .vimrc
-     Plug 'shumphrey/fugitive-gitlab.vim'
-     Plug 'kmARC/vim-fubitive'
+     " Plug 'shumphrey/fugitive-gitlab.vim'
+     Plug 'tommcdo/vim-fubitive'
      " TODO
-     Plug 'jparise/vim-phabricator'
+     " Plug 'jparise/vim-phabricator'
      "Plug 'tpope/vim-git' "For really old vims
      "
      Plug 'mhinz/vim-signify' " all other VCS
