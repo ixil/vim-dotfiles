@@ -402,10 +402,10 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'metakirby5/codi.vim'
          Plug 'epeli/slimux'
 
-     "" Jupyter:
-     "Plug 'julienr/vim-cellmode'
-     "Plug 'jupyter-vim/jupyter-vim'
-     " Plug 'szymonmaszke/vimpyter' "Jupyter
+         " Jupyter:
+         "Plug 'julienr/vim-cellmode'
+         Plug 'jupyter-vim/jupyter-vim'
+         " Plug 'szymonmaszke/vimpyter' "Jupyter
 
      """ Documentation:
     Plug 'kkoomen/vim-doge' "TODO configure
