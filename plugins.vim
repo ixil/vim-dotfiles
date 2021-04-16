@@ -257,18 +257,14 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " TODO
      "Plug 'sickill/vim-pasta'
-     " TODO
-     " Remove YouCompleteMe go to ucomplete/language server based things
-     " Plug 'neovim/nvim-lsp'
-     " Plug 'prabirshrestha/vim-lsp'
-     " Plug 'prabirshrestha/asyncomplete.vim'
-         " Plug 'prabirshrestha/asyncomplete-lsp.vim
 
      " Plug 'lifepillar/vim-mucomplete' 
-     Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
-     " TODO ARCH only
-     " Plug '/usr/share/vim/vimfiles/plugin/youcompleteme.vim', { 'as':'YouCompleteMe', 'on': [] }
-     " Plug '/usr/share/vim-youcompleteme/plugin/youcompleteme.vim', { 'as':'YouCompleteMe'}
+     if filereadable('/usr/share/vim-youcompleteme/plugin/youcompleteme.vim')
+         Plug '/usr/share/vim-youcompleteme/plugin/youcompleteme.vim', { 'as':'YouCompleteMe'}
+     else
+         Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+     endif
+
      " TODO
      Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
      " Plug 'Cocophotos/vim-ycm-latex-semantic-completer'
@@ -327,12 +323,14 @@ call plug#begin('~/.local/share/vim/plugged')
 
      " FZF
      " TODO arch installed on the rtp, otherwise use nix
-     Plug 'junegunn/fzf'
-     " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-     Plug '~/.nix-profile/share/vim-plugins/fzf/plugin/fzf.vim',  { 'as': 'local/fzf.vim' }  "basic usage, in
-     " Plug '/usr/share/vim/vimfiles/plugin/fzf',  { 'as': 'local/fzf.vim' }  "basic usage, in
+     " Plug 'junegunn/fzf'
+     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+     " Plug '~/.nix-profile/share/vim-plugins/fzf/plugin/fzf.vim',  { 'as': 'local/fzf.vim' }  "basic usage, in
+     " Plug '/usr/share/vim/vimfiles/plugin/fzf.vim',  { 'as': 'local/fzf' }  "
+     " Plug '/usr/share/vim/vimfiles/plugin/fzf/',  { 'as': 'local/fzf.vim' }  "
      " Plug 'rayjzeng/fzf.vim'
-     Plug 'junegunn/fzf.vim' " requires junegunn/fzf::plugins/fzf.vim
+     " requires junegunn/fzf::plugins/fzf.vim
+     Plug 'junegunn/fzf.vim'
      Plug 'pbogut/fzf-mru.vim' "FZFMru
 
      Plug 'wakatime/vim-wakatime'
