@@ -116,12 +116,20 @@ let g:signify_sign_show_text = 1
 
 " IndentLine {{
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-" let g:indentLine_char = ''
 " let g:indentLine_first_char = ''
+" let g:indentLine_char = ''
 let g:indentLine_fileTypeExclude = ['tex', 'md']
 let g:indentLine_concealcursor = 'c'
 let g:indentLine_showFirstIndentLevel = 0
 let g:indentLine_setColors = 0
+let g:indentLine_defaultGroup = 'IndentGuidesEven'
+
+" Nord Compatibility
+let g:indentLine_color_term = 0
+let g:indentLine_bgcolor_term = "NONE"
+let g:indentLine_color_gui = '#3b4252'
+let g:indentLine_bgcolor_gui = 'NONE'
+
 " " Vim
 " let g:indentLine_color_term = 239
 " " GVim
