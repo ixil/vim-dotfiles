@@ -33,6 +33,9 @@ source $XDG_CONFIG_HOME/vim/conf.d/cheat-sh.vim
 " *dispatch*
 source $XDG_CONFIG_HOME/vim/conf.d/dispatch.vim
 
+" *vim-test*
+source $XDG_CONFIG_HOME/vim/conf.d/vim-test.vim
+
 " *Ultisnips*
 source $XDG_CONFIG_HOME/vim/conf.d/ultisnips.vim
 
