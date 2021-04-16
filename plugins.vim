@@ -384,6 +384,8 @@ call plug#begin('~/.local/share/vim/plugged')
 
 
  """ Filetypes:
+     "" Neomutt config
+     Plug 'neomutt/neomutt.vim'
      "" C/C++ clang
      Plug 'octol/vim-cpp-enhanced-highlight'
      " Plug 'bfrg/vim-cpp-modern' "TODO Polyglot, this supports /20
@@ -458,6 +460,14 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'AndrewRadev/sideways.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
+
+ " Mail/notmuch
+     Plug 'Konfekt/vim-notmuch-addrlookup'
+     " Should work with modern enough notmuch
+     " if !executable('notmuch-addrlookup')
+     "   Plug 'aperezdc/notmuch-addrlookup-c', { 'do': 'make' }
+     "   let $PATH .= expand(':~/.local/share/vim/plugged/notmuch-addrlookup-c')
+     " endif
 
  " Window management
      Plug 'simeji/winresizer'
