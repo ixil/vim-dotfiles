@@ -38,7 +38,7 @@ set history=10000
 " General:
 set number              " Show line numbers
 set linebreak           " Break lines at word (requires Wrap lines)
-set textwidth=100       " Line wrap (number of cols)
+set textwidth=0       " Line wrap (number of cols)
 set nowrap              " don't wrap lines
 set showmatch           " Highlight matching brace
 set visualbell          " Use visual bell (no beeping)
