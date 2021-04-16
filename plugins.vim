@@ -346,6 +346,8 @@ call plug#begin('~/.local/share/vim/plugged')
  " Binaries Interfaces And Helpers:
      Plug 'ojroques/vim-oscyank'
 
+     " Databases
+     Plug 'tpope/vim-dadbod'
 
      Plug 'dbeniamine/cheat.sh-vim'
  if has('nvim')
