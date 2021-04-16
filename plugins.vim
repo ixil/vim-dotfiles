@@ -348,10 +348,11 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'tpope/vim-tbone'
      "Plug 'benmills/vimux'
 
+     " TODO make the mappings between repl things the same
      " Inline REPL:
-     "Plug 'jpalardy/vim-slime'
-     Plug 'metakirby5/codi.vim'
-     Plug 'epeli/slimux'
+         "Plug 'jpalardy/vim-slime'
+         Plug 'metakirby5/codi.vim'
+         Plug 'epeli/slimux'
 
      "" Jupyter:
      "Plug 'julienr/vim-cellmode'

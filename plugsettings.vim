@@ -118,12 +118,15 @@ source $XDG_CONFIG_HOME/vim/conf.d/Motions.vim
 " *YankRing*
 " source $XDG_CONFIG_HOME/vim/conf.d/yankring.vim
 
+" *Codi*
+" source $XDG_CONFIG_HOME/vim/conf.d/codi.vim
+" Slime
+source $XDG_CONFIG_HOME/vim/conf.d/slime.vim
+
+
 " *Incsearch*
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
-
-" Slime
-source $XDG_CONFIG_HOME/vim/conf.d/slime.vim
 
 " *Lion*
 source $XDG_CONFIG_HOME/vim/conf.d/lion.vim
