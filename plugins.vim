@@ -353,6 +353,7 @@ call plug#begin('~/.local/share/vim/plugged')
  if has('nvim')
      Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
  endif
+     Plug 'CoatiSoftware/vim-sourcetrail'
      Plug 'fourjay/vim-password-store'
      Plug 'wincent/terminus'
      Plug 'junegunn/vim-peekaboo'  " Register display tray
