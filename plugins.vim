@@ -166,29 +166,42 @@ call plug#begin('~/.local/share/vim/plugged')
  """ Text Objects:
  " https://github.com/kana/vim-textobj-user/wiki
  Plug 'kana/vim-textobj-user' |
-     Plug 'kana/vim-textobj-indent' "i,I
-     Plug 'kana/vim-textobj-entire' "e
-     Plug 'kana/vim-textobj-fold' "z
-     Plug 'kana/vim-textobj-lastpat' "/
-     Plug 'kana/vim-textobj-function' "f,F
-     Plug 'idbrii/textobj-word-column.vim' "c,C
-     Plug 'Julian/vim-textobj-brace' "j
-     Plug 'lucapette/vim-textobj-underscore' "_
-     Plug 'libclang-vim/vim-textobj-clang' ";, ;{m,c,f,e,s,p,n,u,a}
+ "i,I
+     Plug 'kana/vim-textobj-indent'
+     "e
+     Plug 'kana/vim-textobj-entire'
+     "z
+     Plug 'kana/vim-textobj-fold'
+     "/
+     Plug 'kana/vim-textobj-lastpat'
+     "f,F
+     Plug 'kana/vim-textobj-function'
+     "c,C
+     Plug 'idbrii/textobj-word-column.vim'
+     "j
+     Plug 'Julian/vim-textobj-brace'
+     "_
+     Plug 'lucapette/vim-textobj-underscore'
+     ";, ;{m,c,f,e,s,p,n,u,a}
+     Plug 'libclang-vim/vim-textobj-clang'
      " TODO
-     Plug 'rbonvall/vim-textobj-latex' "\, $ math 
+     "\, $ math
+     Plug 'rbonvall/vim-textobj-latex'
     " q,Q single/double quoted
     " e - envirenment (begin - end)
-     Plug 'jasonlong/vim-textobj-css' "c
+    "c
+     Plug 'jasonlong/vim-textobj-css'
      Plug 'gaving/vim-textobj-argument'
 
      Plug 'thalesmello/vim-textobj-methodcall'
      " TODO
      " TODO
-     Plug 'bps/vim-textobj-python' "f,c
+     "f,c
+     Plug 'bps/vim-textobj-python'
      " Plug 'wellle/targets.vim'
 
-     Plug 'terryma/vim-expand-region' "J/K
+     "J/K
+     Plug 'terryma/vim-expand-region'
      Plug 'https://gist.github.com/ixil/5356298948576735b3713b01d668a399',
                  \ { 'as': 'local/next_motion_mapping.vim', 'do': 'mkdir -p plugin; cp -f *.vim plugin/' }
 
