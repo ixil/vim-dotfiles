@@ -348,6 +348,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
 
      Plug 'dbeniamine/cheat.sh-vim'
+ if has('nvim')
+     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+ endif
      Plug 'wincent/terminus'
      Plug 'junegunn/vim-peekaboo'  " Register display tray
 
