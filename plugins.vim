@@ -141,11 +141,7 @@ call plug#begin('~/.local/share/vim/plugged')
 
  " --------------------------------------------------------------------------------
  " Tests
- Plug 'janko-m/vim-test'
-
- " Debugging:
-     " Plug 'vim-vdebug/vdebug'
-     " Plug 'gilligan/vim-lldb'
+     Plug 'vim-test/vim-test'
 
  " Functionality:
      " Plug 's1341/vim-tabws' "TODO

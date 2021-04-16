@@ -590,6 +590,13 @@ endif
 autocmd VimrcCustomDP VimEnter * if &diff|nnoremap <buffer> dp dp|endif
 "}}}4
 
+" TODO Test keys
+" nmap <silent> t<C-n> :TestNearest<CR>
+" nmap <silent> t<C-f> :TestFile<CR>
+" nmap <silent> t<C-s> :TestSuite<CR>
+" nmap <silent> t<C-l> :TestLast<CR>
+" nmap <silent> t<C-g> :TestVisit<CR>
+
 "TODO whatis thisis!?{{{4
 nnoremap <expr> <silent> dd (getline('.') =~ '^$' ? '"_' : '').'dd'
 "}}}4
