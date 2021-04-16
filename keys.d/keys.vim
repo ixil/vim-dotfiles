@@ -317,6 +317,10 @@ nmap t <Plug>(easymotion-tl)
 xmap t <Plug>(easymotion-tl)
 nmap T <Plug>(easymotion-Tl)
 xmap T <Plug>(easymotion-Tl)
+nmap ; <Plug>(easymotion-next)
+xmap ; <Plug>(easymotion-next)
+nmap , <Plug>(easymotion-prev)
+xmap , <Plug>(easymotion-prev)
 " }}}4
 
 " Expand-region:                            {{{4
