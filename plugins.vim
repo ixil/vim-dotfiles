@@ -369,13 +369,13 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'junegunn/fzf.vim'
      Plug 'pbogut/fzf-mru.vim' "FZFMru
 
-     Plug 'wakatime/vim-wakatime'
+     Plug 'ActivityWatch/aw-watcher-vim'
      Plug 'blindFS/vim-taskwarrior'
      Plug 'tbabej/taskwiki'
 
-     Plug 'raghur/vim-ghost'
-         Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
-         Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
+     " Plug 'raghur/vim-ghost'
+     "     Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
+     "     Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
 
      " Plug 'stevearc/vim-arduino'
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
