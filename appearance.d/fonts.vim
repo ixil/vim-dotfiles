@@ -1,4 +1,4 @@
-set guifont=iosevka\ 11
+set guifont=iosevka\ Term\ SS05
 "  if has('gui_running')
    " Font
    " set guifont=iosevka\ 12

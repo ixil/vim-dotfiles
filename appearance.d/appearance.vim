@@ -27,10 +27,20 @@ if &term =~# '256color'
   if ( &term =~# '^screen'  || &term =~# '^tmux' )
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-  else
-    set termguicolors " be hopeful it's already set
   endif
+    set termguicolors
+elseif &term == 'xterm-kitty'
+  let &t_RV = ''
+  let &t_ut = ''
+  set termguicolors
+  " if has('gui_running') || has('nvim') 
+  "   hi Normal       guifg=#f6f3e8 guibg=#242424 
+  " else
+  "   " Set the terminal default background and foreground colors, thereby
+  "   " improving performance by not needing to set these colors on empty cells.
+  "   hi Normal guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE
+  "   let &t_ti = &t_ti . "\033]10;#f6f3e8\007\033]11;#242424\007"
+  "   let &t_te = &t_te . "\033]110\007\033]111\007"
 endif
 
 " General:
@@ -61,6 +71,7 @@ let g:nord_italic_comments = 1
 let g:nord_bold = 1
 let base16colorspace=256
 let g:one_allow_italics = 1
+let g:indent_guides_auto_colors = 0
 
 " colorscheme 'hybrid-sl'
 colorscheme nord

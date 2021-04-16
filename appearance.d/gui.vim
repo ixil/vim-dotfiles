@@ -7,4 +7,4 @@
   set guioptions-=M
   set guioptions-=r
   set guioptions-=R
-
+set guiheadroom=0
