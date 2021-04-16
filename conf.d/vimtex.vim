@@ -27,22 +27,4 @@ let g:vimtex_view_method='zathura'
 " let g:vimtex_view_method = 'zathura'
 let g:tex_conceal='abdmg'
 
-let g:vimtex_quickfix_latexlog = {
-      \ 'default' : 1,
-      \ 'general' : 1,
-      \ 'references' : 1,
-      \ 'overfull' : 0,
-      \ 'underfull' : 0,
-      \ 'font' : 1,
-      \ 'packages' : {
-      \   'default' : 1,
-      \   'general' : 1,
-      \   'babel' : 1,
-      \   'biblatex' : 1,
-      \   'fixltx2e' : 1,
-      \   'hyperref' : 1,
-      \   'natbib' : 1,
-      \   'scrreprt' : 1,
-      \   'titlesec' : 1,
-      \ },
-      \}
+" let g:vimtex_quickfix_ignore_filters
