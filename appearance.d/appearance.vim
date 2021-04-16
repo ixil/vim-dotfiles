@@ -53,6 +53,7 @@ set sidescrolloff=1 "Keep extend charactor on screen / autoscroll when 1 away fr
 " Visuals:                                                                                    " {{{2
 source $XDG_CONFIG_HOME/vim/appearance.d/fonts.vim
 source $XDG_CONFIG_HOME/vim/appearance.d/listchars.vim
+source $XDG_CONFIG_HOME/vim/appearance.d/quickscope.vim
 
 " AutoCmds
 augroup qs_colors
