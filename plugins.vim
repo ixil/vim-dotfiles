@@ -362,9 +362,8 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'CoatiSoftware/vim-sourcetrail'
      Plug 'fourjay/vim-password-store'
      Plug 'wincent/terminus'
-     Plug 'junegunn/vim-peekaboo'  " Register display tray
 
-     " FZF
+     " FZF:
      " TODO arch installed on the rtp, otherwise use nix
      " Plug 'junegunn/fzf'
      Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -384,6 +383,15 @@ call plug#begin('~/.local/share/vim/plugged')
      "     Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
      "     Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
 
+     " Mail:
+         " Notmuch:
+         Plug 'Konfekt/vim-notmuch-addrlookup'
+     " Should work with modern enough notmuch
+     " if !executable('notmuch-addrlookup')
+     "   Plug 'aperezdc/notmuch-addrlookup-c', { 'do': 'make' }
+     "   let $PATH .= expand(':~/.local/share/vim/plugged/notmuch-addrlookup-c')
+     " endif
+
      " Plug 'stevearc/vim-arduino'
      "Plug 'mattn/webapi-vim' Interface for WEB APIs (Requires cURL)
      "Plug 'devjoe/vim-codequery'
@@ -394,13 +402,18 @@ call plug#begin('~/.local/share/vim/plugged')
 
 
     " Kitty:
+    if &term == 'xterm-kitty'
+        if exists('$KITTY_LISTEN_ON')
         Plug 'knubie/vim-kitty-navigator'
+        endif
+    endif
     " Tmux:
+    if exists('$TMUX')
          Plug 'christoomey/vim-tmux-navigator' " C{hjkl} to move about panes:
          " Plug 'tmux-plugins/vim-tmux-focus-events' "terminus
-         Plug 'tmux-plugins/vim-tmux' " Filetype for .tmux.conf
          " Plug 'tpope/vim-tbone'
          "Plug 'benmills/vimux'
+     endif
 
      " TODO make the mappings between repl things the same
      " Inline REPL:
@@ -440,6 +453,8 @@ call plug#begin('~/.local/share/vim/plugged')
  """ Filetypes:
      "" Neomutt config
      Plug 'neomutt/neomutt.vim'
+     "" Tmux
+     Plug 'tmux-plugins/vim-tmux'
      "" C/C++ clang
      Plug 'octol/vim-cpp-enhanced-highlight'
      " Plug 'bfrg/vim-cpp-modern' "TODO Polyglot, this supports /20
@@ -502,7 +517,8 @@ call plug#begin('~/.local/share/vim/plugged')
      "" HEX Editing:
          Plug 'Shougo/vinarise.vim'
 
-     """ ROS
+
+     """ ROS:
          Plug 'taketwo/vim-ros'
          Plug 'kgreenek/vim-ros-ycm'
          " Plug 'galou/vim-ros', { 'branch': 'python3' }
@@ -514,16 +530,9 @@ call plug#begin('~/.local/share/vim/plugged')
      " Plug 'AndrewRadev/sideways.vim'
      Plug 'mhinz/vim-startify'
      Plug 'kshenoy/vim-signature' " Marks
+     Plug 'junegunn/vim-peekaboo'  " Register display tray
 
- " Mail/notmuch
-     Plug 'Konfekt/vim-notmuch-addrlookup'
-     " Should work with modern enough notmuch
-     " if !executable('notmuch-addrlookup')
-     "   Plug 'aperezdc/notmuch-addrlookup-c', { 'do': 'make' }
-     "   let $PATH .= expand(':~/.local/share/vim/plugged/notmuch-addrlookup-c')
-     " endif
-
- " Window management
+ " Window Management:
      Plug 'simeji/winresizer'
      " Plug 'dr-chip-vim-scripts/ZoomWin' "C-w o to zoom in/out
      Plug 'regedarek/ZoomWin' "C-w o to zoom in/out
@@ -555,8 +564,6 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'chriskempson/base16-vim'
      Plug 'jandamm/vim-one' " Actually called 'one'
 
-""" To Be Loaded Last:
-" endwise
 
 call plug#end()
 
