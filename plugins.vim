@@ -163,6 +163,7 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'jamessan/vim-gnupg'
 
      " Build, makeprg, compiler definitions
+     Plug 'johnsyweb/vim-makeshift'
      Plug 'tpope/vim-dispatch'
      " Plug 'vim-scripts/clang'
 
