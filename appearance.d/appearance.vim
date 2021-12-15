@@ -23,13 +23,13 @@ endif
   " augroup END
 
 " 256color termcaps
-if &term =~# '256color'
+if $TERM =~# '256color'
   if ( &term =~# '^screen'  || &term =~# '^tmux' )
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
     set termguicolors
-elseif &term == 'xterm-kitty'
+elseif $TERM == 'xterm-kitty'
   let &t_RV = ''
   let &t_ut = ''
   set termguicolors
