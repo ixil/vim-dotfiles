@@ -18,12 +18,12 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 " Assumes system installation of ycm TODO
 " let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+
 " Plug Load:
 call plug#begin('~/.local/share/vim/plugged')
 
 " Local Plugins:
      Plug '~/Templates/snippets'
-
  """ General Editing:
      " Plug 'Konfekt/FastFold' " Faster/Better folding
      Plug 'mbbill/undotree' " F3 to show
@@ -401,7 +401,6 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      " Plug 'papis/papis-vim.git'
 
-
     " Kitty:
     if &term == 'xterm-kitty'
         if exists('$KITTY_LISTEN_ON')
@@ -470,6 +469,8 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'Valloric/MatchTagAlways'
          Plug 'mattn/emmet-vim' " TODO
          "Plug 'alvan/vim-closetag'
+         Plug 'hail2u/vim-css3-syntax'
+         Plug 'gko/vim-coloresque'
 
      "" Python:
          Plug 'fs111/pydoc.vim'
@@ -501,6 +502,9 @@ call plug#begin('~/.local/share/vim/plugged')
      "" Clojure Scheme Lisp Timl:
          Plug 'guns/vim-sexp'
 
+     "" ABB RAPID:
+         Plug 'KnoP-01/rapid-for-vim'
+
      "" Markdown:
         " Use pandoc instead
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -523,6 +527,7 @@ call plug#begin('~/.local/share/vim/plugged')
          Plug 'taketwo/vim-ros'
          Plug 'kgreenek/vim-ros-ycm'
          " Plug 'galou/vim-ros', { 'branch': 'python3' }
+
 
  " Utilities:
      " TODO
@@ -564,7 +569,6 @@ call plug#begin('~/.local/share/vim/plugged')
      Plug 'ayu-theme/ayu-vim'
      Plug 'chriskempson/base16-vim'
      Plug 'jandamm/vim-one' " Actually called 'one'
-
 
 call plug#end()
 
