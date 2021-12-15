@@ -23,12 +23,14 @@ if !has('nvim') " Neovim has its own special location
   set viminfofile=$XDG_CACHE_HOME/vim/viminfo
   let &pythondll=&pythonthreedll
 else
-  " cd ~/.config/nvim && pipenv --py
-
+  " cd ~/.config/nvim && nvm use && nvm which current
+  let g:node_host_prog = '/home/ixil/.local/share/nvm/versions/node/v16.3.0/bin/node'
+  " cd ~/.config/nvim && pyenv install   && pipenv --py
   " let g:python_host_prog = '/full/path/to/neovim2/bin/python'
-  " let g:python3_host_prog = '/home/ixil/.local/share/virtualenvs/nvim-bV7aKuTs/bin/python'
- if exists('g:started_by_firenvim')
- endif
+  " let g:python3_host_prog = '/full/path/to/neovim2/bin/python'
+  " or if system installed
+  " let g:python_host_prog = '/usr/bin/python2'
+  " let g:python3_host_prog = '/usr/bin/python3'
 endif
 
 " Always use the same venv for vim regardless of shell env
