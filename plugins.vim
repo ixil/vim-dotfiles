@@ -31,6 +31,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      Plug 'pelodelfuego/vim-swoop'
      Plug 'wincent/ferret'
+     Plug 'JRasmusBm/vim-peculiar'
 
      " for turning multiline code <-> into single line: gS, gJ
      Plug 'AndrewRadev/splitjoin.vim'
