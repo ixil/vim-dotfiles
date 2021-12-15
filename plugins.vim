@@ -489,8 +489,9 @@ call plug#begin('~/.local/share/vim/plugged')
          " Plug 'JuliaEditorSupport/julia-vim' "Polyglot
 
      "" Javascript:
-         Plug 'letientai299/vim-react-snippets' ", { 'branch': 'es6' }
-         " Plug 'pangloss/vim-javascript' "Polyglot
+    "  Plug 'epilande/vim-react-snippets'
+     Plug 'mlaursen/vim-react-snippets' ", { 'branch': 'es6' }
+     " Plug 'pangloss/vim-javascript' "Polyglot
 
      "" Rust:
          " Plug 'rust-lang/rust.vim', {' for': 'rust'} "Polyglot
