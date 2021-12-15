@@ -82,8 +82,8 @@ vnoremap > >gv
 vnoremap < <gv
 vnoremap < <gv
 
-" ;\ Group backslashing for regexes {{{5
-cmap ;\ \(\)<Left><Left>
+" ;( Group backslashing for regexes {{{5
+cmap ;( \(\)<Left><Left>
 
 " Use Eunuch plugin instead for :SudoWrite{{{5
 " cmap w!! w !sudo tee > /dev/null %
@@ -459,6 +459,29 @@ nmap <F2> :call customFuncs#SynStack2()<CR>
 " nmap <F2> :call customFuncs#SynStack()<CR>
 
 nnoremap <F3> :UndotreeToggle<cr>
+nnoremap <F5> :<C-U>Make<CR>
+" nnoremap <F5> :<C-U>MakeshiftBuild<CR>
+" nnoremap <F6> :<C-U>MakeshiftBuild check<CR>
+" Map <F5> to the Debug executable with passed filename
+function SetBinaryDebug(filename)
+  " let bpath = getcwd() . "/bin/Debug/" . a:filename
+  let bpath = getcwd() . a:filename
+  execute "nnoremap <F5> :Dispatch "
+        \ bpath
+        \ . " <CR> <bar> :Copen<CR>"
+  echo "<F5> will run: " . bpath
+endfunction
+
+" Map <F6> to the Release executable with passed filename
+function SetBinaryRelease(filename)
+  " let bpath = getcwd() .  a:filename
+  let bpath = getcwd() . "/bin/Release/" . a:filename
+  execute "nnoremap <F6> :Dispatch "
+        \ bpath
+        \ . "<CR> <bar> :Copen<CR>"
+  echo "<F6> will run: " . bpath
+endfunction
+
 
 " TODO augroup this for markdown etc augroup, but keep F8 as the Tags/TOC Toggler
 nnoremap <F8> :TagbarToggle<CR>
