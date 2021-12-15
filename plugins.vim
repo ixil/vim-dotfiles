@@ -463,9 +463,9 @@ call plug#begin('~/.local/share/vim/plugged')
     " Plug 'lyuts/vim-rtags'
      " Plug 'vhdirk/vim-cmake'
      Plug 'farafonov-alexey/vim-cmake'
-
      Plug 'hsanson/vim-openapi'
      Plug 'xavierchow/vim-swagger-preview'
+     Plug 'yasuhiroki/github-actions-yaml.vim'
 
      "" Tag Languages: (HTML/CSS)
          Plug 'Valloric/MatchTagAlways'
