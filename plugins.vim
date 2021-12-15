@@ -348,13 +348,16 @@ call plug#begin('~/.local/share/vim/plugged')
  " Binaries Interfaces And Helpers:
      Plug 'ojroques/vim-oscyank'
 
-     " Databases
+     " Databases:
      Plug 'tpope/vim-dadbod'
 
+     " CLI And More:
      Plug 'dbeniamine/cheat.sh-vim'
- if has('nvim')
-     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
- endif
+     if has('nvim')
+         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+         Plug 'lambdalisue/suda.vim'
+     endif
+
      Plug 'CoatiSoftware/vim-sourcetrail'
      Plug 'fourjay/vim-password-store'
      Plug 'wincent/terminus'

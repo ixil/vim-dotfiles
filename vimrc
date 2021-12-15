@@ -16,6 +16,9 @@ endif
 " General Settings:
 " set nocompatible " done already in /etc/vimrc
 source $XDG_CONFIG_HOME/vim/conf.d/general.vim
+if exists('g:started_by_firenvim')
+    source $XDG_CONFIG_HOME/vim/conf.d/firenvim.vim
+endif
 source $XDG_CONFIG_HOME/vim/functions.d/customFuncs.vim
 
 " Plugins:

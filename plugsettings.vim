@@ -125,6 +125,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/Motions.vim
 " source $XDG_CONFIG_HOME/vim/conf.d/codi.vim
 " Slime
 source $XDG_CONFIG_HOME/vim/conf.d/slime.vim
+source $XDG_CONFIG_HOME/vim/conf.d/firenvim.vim
 
 
 " *Incsearch*
