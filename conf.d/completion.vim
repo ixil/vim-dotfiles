@@ -24,8 +24,8 @@ let g:completion_chain_complete_list = {
             \   { 'complete_items': ['lsp', 'snippet']},
             \   { 'complete_items': ['tags']},
             \   { 'complete_items': ['buffers'] },
-            \   { 'mode': { '<c-p>' } },
-            \   { 'mode': { '<c-n>' } }
+            \   { 'mode': [ '<c-p>' ] },
+            \   { 'mode': [ '<c-n>' ] }
             \ ],
             \ 'sql': [
             \   {'complete_items': ['vim-dadbod-completion']},

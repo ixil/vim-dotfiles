@@ -88,7 +88,7 @@ set thesaurus+=~/.local/share/vim/thesaurus/thesaurus.txt
 set keywordprg=:Man " Sets 'K' to use the :Man command and load the man page in a split
 
 " Finding Files:
-" set path+=**
+set path+=./**
 set wildmenu     " visual autocomplete for command menu
 
 if &term =~ '^tmux'
