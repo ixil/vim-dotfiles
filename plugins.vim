@@ -237,6 +237,7 @@ call plug#begin('~/.local/share/vim/plugged')
      "TODO github api in .vimrc
      " Plug 'shumphrey/fugitive-gitlab.vim'
      Plug 'tommcdo/vim-fubitive'
+     Plug 'rbong/vim-flog'
      " TODO
      " Plug 'jparise/vim-phabricator'
      "Plug 'tpope/vim-git' "For really old vims
