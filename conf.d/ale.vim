@@ -4,6 +4,8 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_warning = '›'
 let g:ale_sign_error = '›'
 
+let g:ale_c_cc_options='-std=c20 -Wall'
+let g:ale_cpp_cc_options =1
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_lint_delay = 400             "Default 200 ms
 let g:ale_echo_msg_error_str = 'E'
@@ -31,6 +33,7 @@ let g:ale_pattern_options = {
 let g:ale_parse_compile_commands=1
 
 let g:ale_linters_ignore.cpp = [ 'cquery', 'g\+\+', 'gcc', 'clang', 'cppcheck']
+
 " let g:ale_linters.javascript = ['eslint']
 " let g:ale_linters.html = []
 let g:ale_linters.tex = ['lacheck', 'chktex', 'texlab', 'redpen', 'proselint', 'vale', 'lty']
@@ -45,6 +48,7 @@ let g:ale_fixers.python = ['black']
 let g:ale_fixers.css = ['prettier']
 let g:ale_fixers.yaml = ['prettier']
 let g:ale_fixers.openapi = ['yamlfix', 'prettier']
+
 " 'add_blank_lines_for_python_control_statements' - Add blank lines before control statements.
 " 'autopep8' - Fix PEP8 issues with autopep8.
 " 'black' - Fix PEP8 issues with black.

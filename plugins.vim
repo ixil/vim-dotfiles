@@ -300,8 +300,7 @@ call plug#begin('~/.local/share/vim/plugged')
      " TODO
      Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
      " Plug 'Cocophotos/vim-ycm-latex-semantic-completer'
-     " Plug 'jeayae/color_coded', { 'do': 'rm -f CMakeCache.txt && cmake . && make && make install',\
-     "    'for': ['cpp', 'objc', 'objcpp'], 'build_commands' : ['cmake', 'make']}
+     " Plug 'jeayae/color_coded', { 'do': 'rm -f CMakeCache.txt && cmake . && make && make install', 'for': ['cpp', 'objc', 'objcpp'], 'build_commands' : ['cmake', 'make']}
 
      " CCLS
      Plug 'm-pilia/vim-ccls'

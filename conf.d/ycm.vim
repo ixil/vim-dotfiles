@@ -7,7 +7,7 @@ let g:ycm_collect_identifiers_from_tags_files = 0
 
 " TODO
 " let g:ycm_global_ycm_extra_conf = '~/.vim/default_ycm_extra_conf.py'
-let g:ycm_extra_conf_globlist = ['~/'.$ROS_WORKSPACE.'/*']
+" let g:ycm_extra_conf_globlist = ['~/'.$ROS_WORKSPACE.'/*']
 
 let g:ycm_filetype_blacklist={
             \  'fugitive': 1,
