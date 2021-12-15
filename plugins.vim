@@ -17,6 +17,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 " let g:vimtex_include_indicators=['input', 'include', 'import', 'subimport', 'import*', 'subimport*']
 " Assumes system installation of ycm TODO
 " let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:tq_use_vim_autocomplete=0
 
 
 " Plug Load:
