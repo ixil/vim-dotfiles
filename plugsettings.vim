@@ -145,6 +145,7 @@ source $XDG_CONFIG_HOME/vim/conf.d/ctrlsf.vim
 
 " *Startify*
 source $XDG_CONFIG_HOME/vim/conf.d/startify.vim
+source $XDG_CONFIG_HOME/vim/conf.d/startify_quotes.vim
 
 " *MultiCursor*
 let g:multi_cursor_use_default_mapping=0
